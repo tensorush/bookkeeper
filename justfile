@@ -36,11 +36,6 @@ mockgen:
     mockgen -package mockdb -destination ./internal/db/mock/store.go bookkeeper/internal/db Store
     mockgen -package mockwk -destination ./internal/worker/mock/distributor.go bookkeeper/internal/worker TaskDistributor
 
-docs: gopages dbdocs
-
-gopages:
-    gopages -internal -out docs
-
 dbdocs:
     dbdocs build ./dbdocs/db.dbml
     dbml2sql --postgres -o ./dbdocs/schema.sql ./dbdocs/db.dbml

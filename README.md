@@ -1,7 +1,6 @@
 ## :hamster: :books: bookkeeper
 
 [![CI][ci-shield]][ci-url]
-[![Docs][docs-shield]][docs-url]
 [![Schema][schema-shield]][schema-url]
 [![License][license-shield]][license-url]
 
@@ -34,8 +33,6 @@
 
 - [`statik` - Static file embedding tool for Go](https://github.com/rakyll/statik)
 
-- [`gopages` - Go documentation generator](https://johnstarich.com/go/gopages/pkg/github.com/johnstarich/go/gopages/)
-
 - [`dbdocs` - Database documentation tool](https://dbdocs.io/)
 
 - [`dbml2sql` - DBML-to-SQL converter](https://dbml.dbdiagram.io/cli/)
@@ -44,8 +41,6 @@
 
 [ci-shield]: https://img.shields.io/github/actions/workflow/status/tensorush/bookkeeper/ci.yaml?branch=main&style=for-the-badge&logo=github&label=CI&labelColor=black
 [ci-url]: https://github.com/tensorush/bookkeeper/blob/main/.github/workflows/ci.yaml
-[docs-shield]: https://img.shields.io/badge/click-2596BE?style=for-the-badge&logo=go&logoColor=2596BE&label=docs&labelColor=black
-[docs-url]: https://tensorush.github.io/bookkeeper
 [schema-shield]: https://img.shields.io/badge/click-2596BE?style=for-the-badge&logo=go&logoColor=2596BE&label=schema&labelColor=black
 [schema-url]: https://dbdocs.io/tensorush/bookkeeper
 [license-shield]: https://img.shields.io/github/license/tensorush/bookkeeper.svg?style=for-the-badge&labelColor=black
