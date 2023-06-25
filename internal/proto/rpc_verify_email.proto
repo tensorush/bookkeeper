@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package protogen;
+
+option go_package = "bookkeeper/internal/protogen";
+
+message VerifyEmailRequest {
+    int64 email_id = 1;
+    string secret_code = 2;
+}
+
+message VerifyEmailResponse {
+    bool is_verified = 1;
+}

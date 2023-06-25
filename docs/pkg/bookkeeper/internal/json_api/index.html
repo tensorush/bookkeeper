@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>json_api - GoPages</title>
+
+<link type="text/css" rel="stylesheet" href="/lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="/lib/godoc/jquery.js" defer></script>
+
+
+
+
+<script>var goVersion = "go1.20.5";</script>
+<script src="/lib/godoc/godocs.js" defer></script>
+
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="/pkg/bookkeeper/">GoPages | Auto-generated docs</a></div>
+<div class="top-heading" id="heading-narrow"><a href="/pkg/bookkeeper/">GoPages</a></div>
+<a href="#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package json_api
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "bookkeeper/internal/json_api"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="#Server">type Server</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewServer">func NewServer(config configs.Config, store db.Store) (*Server, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Server.Start">func (server *Server) Start(address string) error</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/bookkeeper/internal/json_api/account.go.html">account.go</a>
+			
+				<a href="/src/bookkeeper/internal/json_api/middleware.go.html">middleware.go</a>
+			
+				<a href="/src/bookkeeper/internal/json_api/server.go.html">server.go</a>
+			
+				<a href="/src/bookkeeper/internal/json_api/token.go.html">token.go</a>
+			
+				<a href="/src/bookkeeper/internal/json_api/transfer.go.html">transfer.go</a>
+			
+				<a href="/src/bookkeeper/internal/json_api/user.go.html">user.go</a>
+			
+				<a href="/src/bookkeeper/internal/json_api/validator.go.html">validator.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="Server">type <a href="/src/bookkeeper/internal/json_api/server.go.html#L16">Server</a>
+				<a class="permalink" href="#Server">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Server serves HTTP requests for our banking service.
+
+			<pre>type Server struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewServer">func <a href="/src/bookkeeper/internal/json_api/server.go.html#L24">NewServer</a>
+					<a class="permalink" href="#NewServer">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewServer(config <a href="/pkg/bookkeeper/configs/">configs</a>.<a href="/pkg/bookkeeper/configs/#Config">Config</a>, store <a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#Store">Store</a>) (*<a href="#Server">Server</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>NewServer creates a new HTTP server and set up routing.
+
+				
+				
+			
+
+			
+				
+				<h3 id="Server.Start">func (*Server) <a href="/src/bookkeeper/internal/json_api/server.go.html#L62">Start</a>
+					<a class="permalink" href="#Server.Start">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (server *<a href="#Server">Server</a>) Start(address <a href="https://pkg.go.dev/builtin/#string">string</a>) <a href="https://pkg.go.dev/builtin/#error">error</a></pre>
+				<p>Start runs the HTTP server on a specific address.
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.20.5.<br>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

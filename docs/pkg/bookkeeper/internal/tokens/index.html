@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>tokens - GoPages</title>
+
+<link type="text/css" rel="stylesheet" href="/lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="/lib/godoc/jquery.js" defer></script>
+
+
+
+
+<script>var goVersion = "go1.20.5";</script>
+<script src="/lib/godoc/godocs.js" defer></script>
+
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="/pkg/bookkeeper/">GoPages | Auto-generated docs</a></div>
+<div class="top-heading" id="heading-narrow"><a href="/pkg/bookkeeper/">GoPages</a></div>
+<a href="#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package tokens
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "bookkeeper/internal/tokens"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+				<dd><a href="#pkg-variables">Variables</a></dd>
+			
+			
+			
+				
+				<dd><a href="#JWTMaker">type JWTMaker</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#JWTMaker.CreateToken">func (maker *JWTMaker) CreateToken(username string, duration time.Duration) (string, *Payload, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#JWTMaker.VerifyToken">func (maker *JWTMaker) VerifyToken(token string) (*Payload, error)</a></dd>
+				
+			
+				
+				<dd><a href="#Maker">type Maker</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewJWTMaker">func NewJWTMaker(secretKey string) (Maker, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewPasetoMaker">func NewPasetoMaker(symmetricKey string) (Maker, error)</a></dd>
+				
+				
+			
+				
+				<dd><a href="#PasetoMaker">type PasetoMaker</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#PasetoMaker.CreateToken">func (maker *PasetoMaker) CreateToken(username string, duration time.Duration) (string, *Payload, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#PasetoMaker.VerifyToken">func (maker *PasetoMaker) VerifyToken(token string) (*Payload, error)</a></dd>
+				
+			
+				
+				<dd><a href="#Payload">type Payload</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewPayload">func NewPayload(username string, duration time.Duration) (*Payload, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Payload.Valid">func (payload *Payload) Valid() error</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/bookkeeper/internal/tokens/jwt_maker.go.html">jwt_maker.go</a>
+			
+				<a href="/src/bookkeeper/internal/tokens/maker.go.html">maker.go</a>
+			
+				<a href="/src/bookkeeper/internal/tokens/paseto_maker.go.html">paseto_maker.go</a>
+			
+				<a href="/src/bookkeeper/internal/tokens/payload.go.html">payload.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				<p>Different types of error returned by the VerifyToken function.
+
+				<pre>var (
+    <span id="ErrInvalidToken">ErrInvalidToken</span> = <a href="https://pkg.go.dev/errors/">errors</a>.<a href="https://pkg.go.dev/errors/#New">New</a>(&#34;token is invalid&#34;)
+    <span id="ErrExpiredToken">ErrExpiredToken</span> = <a href="https://pkg.go.dev/errors/">errors</a>.<a href="https://pkg.go.dev/errors/#New">New</a>(&#34;token has expired&#34;)
+)</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="JWTMaker">type <a href="/src/bookkeeper/internal/tokens/jwt_maker.go.html#L14">JWTMaker</a>
+				<a class="permalink" href="#JWTMaker">&#xb6;</a>
+				
+				
+			</h2>
+			<p>JWTMaker is a JSON Web Token maker.
+
+			<pre>type JWTMaker struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="JWTMaker.CreateToken">func (*JWTMaker) <a href="/src/bookkeeper/internal/tokens/jwt_maker.go.html#L27">CreateToken</a>
+					<a class="permalink" href="#JWTMaker.CreateToken">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (maker *<a href="#JWTMaker">JWTMaker</a>) CreateToken(username <a href="https://pkg.go.dev/builtin/#string">string</a>, duration <a href="https://pkg.go.dev/time/">time</a>.<a href="https://pkg.go.dev/time/#Duration">Duration</a>) (<a href="https://pkg.go.dev/builtin/#string">string</a>, *<a href="#Payload">Payload</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>CreateToken creates a new token for a specific username and duration.
+
+				
+				
+				
+			
+				
+				<h3 id="JWTMaker.VerifyToken">func (*JWTMaker) <a href="/src/bookkeeper/internal/tokens/jwt_maker.go.html#L39">VerifyToken</a>
+					<a class="permalink" href="#JWTMaker.VerifyToken">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (maker *<a href="#JWTMaker">JWTMaker</a>) VerifyToken(token <a href="https://pkg.go.dev/builtin/#string">string</a>) (*<a href="#Payload">Payload</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>VerifyToken checks if the token is valid or not.
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Maker">type <a href="/src/bookkeeper/internal/tokens/maker.go.html#L8">Maker</a>
+				<a class="permalink" href="#Maker">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Maker is an interface for managing tokens.
+
+			<pre>type Maker interface {
+    <span class="comment">// CreateToken creates a new token for a specific username and duration</span>
+    CreateToken(username <a href="https://pkg.go.dev/builtin/#string">string</a>, duration <a href="https://pkg.go.dev/time/">time</a>.<a href="https://pkg.go.dev/time/#Duration">Duration</a>) (<a href="https://pkg.go.dev/builtin/#string">string</a>, *<a href="#Payload">Payload</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)
+
+    <span class="comment">// VerifyToken checks if the token is valid or not</span>
+    VerifyToken(token <a href="https://pkg.go.dev/builtin/#string">string</a>) (*<a href="#Payload">Payload</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewJWTMaker">func <a href="/src/bookkeeper/internal/tokens/jwt_maker.go.html#L19">NewJWTMaker</a>
+					<a class="permalink" href="#NewJWTMaker">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewJWTMaker(secretKey <a href="https://pkg.go.dev/builtin/#string">string</a>) (<a href="#Maker">Maker</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>NewJWTMaker creates a new JWTMaker.
+
+				
+				
+			
+				
+				<h3 id="NewPasetoMaker">func <a href="/src/bookkeeper/internal/tokens/paseto_maker.go.html#L18">NewPasetoMaker</a>
+					<a class="permalink" href="#NewPasetoMaker">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewPasetoMaker(symmetricKey <a href="https://pkg.go.dev/builtin/#string">string</a>) (<a href="#Maker">Maker</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>NewPasetoMaker creates a new PasetoMaker.
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="PasetoMaker">type <a href="/src/bookkeeper/internal/tokens/paseto_maker.go.html#L12">PasetoMaker</a>
+				<a class="permalink" href="#PasetoMaker">&#xb6;</a>
+				
+				
+			</h2>
+			<p>PasetoMaker is a PASETO token maker.
+
+			<pre>type PasetoMaker struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PasetoMaker.CreateToken">func (*PasetoMaker) <a href="/src/bookkeeper/internal/tokens/paseto_maker.go.html#L32">CreateToken</a>
+					<a class="permalink" href="#PasetoMaker.CreateToken">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (maker *<a href="#PasetoMaker">PasetoMaker</a>) CreateToken(username <a href="https://pkg.go.dev/builtin/#string">string</a>, duration <a href="https://pkg.go.dev/time/">time</a>.<a href="https://pkg.go.dev/time/#Duration">Duration</a>) (<a href="https://pkg.go.dev/builtin/#string">string</a>, *<a href="#Payload">Payload</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>CreateToken creates a new token for a specific username and duration.
+
+				
+				
+				
+			
+				
+				<h3 id="PasetoMaker.VerifyToken">func (*PasetoMaker) <a href="/src/bookkeeper/internal/tokens/paseto_maker.go.html#L43">VerifyToken</a>
+					<a class="permalink" href="#PasetoMaker.VerifyToken">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (maker *<a href="#PasetoMaker">PasetoMaker</a>) VerifyToken(token <a href="https://pkg.go.dev/builtin/#string">string</a>) (*<a href="#Payload">Payload</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>VerifyToken checks if the token is valid or not.
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Payload">type <a href="/src/bookkeeper/internal/tokens/payload.go.html#L17">Payload</a>
+				<a class="permalink" href="#Payload">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Payload contains the payload data of the tokens.
+
+			<pre>type Payload struct {
+<span id="Payload.ID"></span>    ID        <a href="https://pkg.go.dev/github.com/google/uuid/">uuid</a>.<a href="https://pkg.go.dev/github.com/google/uuid/#UUID">UUID</a> `json:&#34;id&#34;`
+<span id="Payload.Username"></span>    Username  <a href="https://pkg.go.dev/builtin/#string">string</a>    `json:&#34;username&#34;`
+<span id="Payload.IssuedAt"></span>    IssuedAt  <a href="https://pkg.go.dev/time/">time</a>.<a href="https://pkg.go.dev/time/#Time">Time</a> `json:&#34;issued_at&#34;`
+<span id="Payload.ExpiredAt"></span>    ExpiredAt <a href="https://pkg.go.dev/time/">time</a>.<a href="https://pkg.go.dev/time/#Time">Time</a> `json:&#34;expired_at&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewPayload">func <a href="/src/bookkeeper/internal/tokens/payload.go.html#L25">NewPayload</a>
+					<a class="permalink" href="#NewPayload">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewPayload(username <a href="https://pkg.go.dev/builtin/#string">string</a>, duration <a href="https://pkg.go.dev/time/">time</a>.<a href="https://pkg.go.dev/time/#Duration">Duration</a>) (*<a href="#Payload">Payload</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>NewPayload creates a new token payload with a specific username and duration.
+
+				
+				
+			
+
+			
+				
+				<h3 id="Payload.Valid">func (*Payload) <a href="/src/bookkeeper/internal/tokens/payload.go.html#L41">Valid</a>
+					<a class="permalink" href="#Payload.Valid">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (payload *<a href="#Payload">Payload</a>) Valid() <a href="https://pkg.go.dev/builtin/#error">error</a></pre>
+				<p>Valid checks if the token payload is valid or not.
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.20.5.<br>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

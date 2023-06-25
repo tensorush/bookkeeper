@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>mockdb - GoPages</title>
+
+<link type="text/css" rel="stylesheet" href="/lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="/lib/godoc/jquery.js" defer></script>
+
+
+
+
+<script>var goVersion = "go1.20.5";</script>
+<script src="/lib/godoc/godocs.js" defer></script>
+
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="/pkg/bookkeeper/">GoPages | Auto-generated docs</a></div>
+<div class="top-heading" id="heading-narrow"><a href="/pkg/bookkeeper/">GoPages</a></div>
+<a href="#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package mockdb
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "bookkeeper/internal/db/mock"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>Package mockdb is a generated GoMock package.
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="#MockStore">type MockStore</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewMockStore">func NewMockStore(ctrl *gomock.Controller) *MockStore</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStore.AddAccountBalance">func (m *MockStore) AddAccountBalance(arg0 context.Context, arg1 db.AddAccountBalanceParams) (db.Account, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStore.CreateAccount">func (m *MockStore) CreateAccount(arg0 context.Context, arg1 db.CreateAccountParams) (db.Account, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStore.CreateEntry">func (m *MockStore) CreateEntry(arg0 context.Context, arg1 db.CreateEntryParams) (db.Entry, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStore.CreateSession">func (m *MockStore) CreateSession(arg0 context.Context, arg1 db.CreateSessionParams) (db.Session, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStore.CreateTransfer">func (m *MockStore) CreateTransfer(arg0 context.Context, arg1 db.CreateTransferParams) (db.Transfer, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStore.CreateUser">func (m *MockStore) CreateUser(arg0 context.Context, arg1 db.CreateUserParams) (db.User, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStore.CreateUserTx">func (m *MockStore) CreateUserTx(arg0 context.Context, arg1 db.CreateUserTxParams) (db.CreateUserTxResult, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStore.CreateVerifyEmail">func (m *MockStore) CreateVerifyEmail(arg0 context.Context, arg1 db.CreateVerifyEmailParams) (db.VerifyEmail, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStore.DeleteAccount">func (m *MockStore) DeleteAccount(arg0 context.Context, arg1 int64) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStore.EXPECT">func (m *MockStore) EXPECT() *MockStoreMockRecorder</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStore.GetAccount">func (m *MockStore) GetAccount(arg0 context.Context, arg1 int64) (db.Account, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStore.GetAccountForUpdate">func (m *MockStore) GetAccountForUpdate(arg0 context.Context, arg1 int64) (db.Account, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStore.GetEntry">func (m *MockStore) GetEntry(arg0 context.Context, arg1 int64) (db.Entry, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStore.GetSession">func (m *MockStore) GetSession(arg0 context.Context, arg1 uuid.UUID) (db.Session, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStore.GetTransfer">func (m *MockStore) GetTransfer(arg0 context.Context, arg1 int64) (db.Transfer, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStore.GetUser">func (m *MockStore) GetUser(arg0 context.Context, arg1 string) (db.User, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStore.ListAccounts">func (m *MockStore) ListAccounts(arg0 context.Context, arg1 db.ListAccountsParams) ([]db.Account, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStore.ListEntries">func (m *MockStore) ListEntries(arg0 context.Context, arg1 db.ListEntriesParams) ([]db.Entry, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStore.ListTransfers">func (m *MockStore) ListTransfers(arg0 context.Context, arg1 db.ListTransfersParams) ([]db.Transfer, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStore.TransferTx">func (m *MockStore) TransferTx(arg0 context.Context, arg1 db.TransferTxParams) (db.TransferTxResult, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStore.UpdateAccount">func (m *MockStore) UpdateAccount(arg0 context.Context, arg1 db.UpdateAccountParams) (db.Account, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStore.UpdateUser">func (m *MockStore) UpdateUser(arg0 context.Context, arg1 db.UpdateUserParams) (db.User, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStore.UpdateVerifyEmail">func (m *MockStore) UpdateVerifyEmail(arg0 context.Context, arg1 db.UpdateVerifyEmailParams) (db.VerifyEmail, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStore.VerifyEmailTx">func (m *MockStore) VerifyEmailTx(arg0 context.Context, arg1 db.VerifyEmailTxParams) (db.VerifyEmailTxResult, error)</a></dd>
+				
+			
+				
+				<dd><a href="#MockStoreMockRecorder">type MockStoreMockRecorder</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStoreMockRecorder.AddAccountBalance">func (mr *MockStoreMockRecorder) AddAccountBalance(arg0, arg1 interface{}) *gomock.Call</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStoreMockRecorder.CreateAccount">func (mr *MockStoreMockRecorder) CreateAccount(arg0, arg1 interface{}) *gomock.Call</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStoreMockRecorder.CreateEntry">func (mr *MockStoreMockRecorder) CreateEntry(arg0, arg1 interface{}) *gomock.Call</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStoreMockRecorder.CreateSession">func (mr *MockStoreMockRecorder) CreateSession(arg0, arg1 interface{}) *gomock.Call</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStoreMockRecorder.CreateTransfer">func (mr *MockStoreMockRecorder) CreateTransfer(arg0, arg1 interface{}) *gomock.Call</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStoreMockRecorder.CreateUser">func (mr *MockStoreMockRecorder) CreateUser(arg0, arg1 interface{}) *gomock.Call</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStoreMockRecorder.CreateUserTx">func (mr *MockStoreMockRecorder) CreateUserTx(arg0, arg1 interface{}) *gomock.Call</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStoreMockRecorder.CreateVerifyEmail">func (mr *MockStoreMockRecorder) CreateVerifyEmail(arg0, arg1 interface{}) *gomock.Call</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStoreMockRecorder.DeleteAccount">func (mr *MockStoreMockRecorder) DeleteAccount(arg0, arg1 interface{}) *gomock.Call</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStoreMockRecorder.GetAccount">func (mr *MockStoreMockRecorder) GetAccount(arg0, arg1 interface{}) *gomock.Call</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStoreMockRecorder.GetAccountForUpdate">func (mr *MockStoreMockRecorder) GetAccountForUpdate(arg0, arg1 interface{}) *gomock.Call</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStoreMockRecorder.GetEntry">func (mr *MockStoreMockRecorder) GetEntry(arg0, arg1 interface{}) *gomock.Call</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStoreMockRecorder.GetSession">func (mr *MockStoreMockRecorder) GetSession(arg0, arg1 interface{}) *gomock.Call</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStoreMockRecorder.GetTransfer">func (mr *MockStoreMockRecorder) GetTransfer(arg0, arg1 interface{}) *gomock.Call</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStoreMockRecorder.GetUser">func (mr *MockStoreMockRecorder) GetUser(arg0, arg1 interface{}) *gomock.Call</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStoreMockRecorder.ListAccounts">func (mr *MockStoreMockRecorder) ListAccounts(arg0, arg1 interface{}) *gomock.Call</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStoreMockRecorder.ListEntries">func (mr *MockStoreMockRecorder) ListEntries(arg0, arg1 interface{}) *gomock.Call</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStoreMockRecorder.ListTransfers">func (mr *MockStoreMockRecorder) ListTransfers(arg0, arg1 interface{}) *gomock.Call</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStoreMockRecorder.TransferTx">func (mr *MockStoreMockRecorder) TransferTx(arg0, arg1 interface{}) *gomock.Call</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStoreMockRecorder.UpdateAccount">func (mr *MockStoreMockRecorder) UpdateAccount(arg0, arg1 interface{}) *gomock.Call</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStoreMockRecorder.UpdateUser">func (mr *MockStoreMockRecorder) UpdateUser(arg0, arg1 interface{}) *gomock.Call</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStoreMockRecorder.UpdateVerifyEmail">func (mr *MockStoreMockRecorder) UpdateVerifyEmail(arg0, arg1 interface{}) *gomock.Call</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MockStoreMockRecorder.VerifyEmailTx">func (mr *MockStoreMockRecorder) VerifyEmailTx(arg0, arg1 interface{}) *gomock.Call</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/bookkeeper/internal/db/mock/store.go.html">store.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="MockStore">type <a href="/src/bookkeeper/internal/db/mock/store.go.html#L17">MockStore</a>
+				<a class="permalink" href="#MockStore">&#xb6;</a>
+				
+				
+			</h2>
+			<p>MockStore is a mock of Store interface.
+
+			<pre>type MockStore struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewMockStore">func <a href="/src/bookkeeper/internal/db/mock/store.go.html#L28">NewMockStore</a>
+					<a class="permalink" href="#NewMockStore">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewMockStore(ctrl *<a href="https://pkg.go.dev/github.com/golang/mock/gomock/">gomock</a>.<a href="https://pkg.go.dev/github.com/golang/mock/gomock/#Controller">Controller</a>) *<a href="#MockStore">MockStore</a></pre>
+				<p>NewMockStore creates a new mock instance.
+
+				
+				
+			
+
+			
+				
+				<h3 id="MockStore.AddAccountBalance">func (*MockStore) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L40">AddAccountBalance</a>
+					<a class="permalink" href="#MockStore.AddAccountBalance">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (m *<a href="#MockStore">MockStore</a>) AddAccountBalance(arg0 <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, arg1 <a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#AddAccountBalanceParams">AddAccountBalanceParams</a>) (<a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#Account">Account</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>AddAccountBalance mocks base method.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStore.CreateAccount">func (*MockStore) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L55">CreateAccount</a>
+					<a class="permalink" href="#MockStore.CreateAccount">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (m *<a href="#MockStore">MockStore</a>) CreateAccount(arg0 <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, arg1 <a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#CreateAccountParams">CreateAccountParams</a>) (<a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#Account">Account</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>CreateAccount mocks base method.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStore.CreateEntry">func (*MockStore) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L70">CreateEntry</a>
+					<a class="permalink" href="#MockStore.CreateEntry">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (m *<a href="#MockStore">MockStore</a>) CreateEntry(arg0 <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, arg1 <a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#CreateEntryParams">CreateEntryParams</a>) (<a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#Entry">Entry</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>CreateEntry mocks base method.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStore.CreateSession">func (*MockStore) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L85">CreateSession</a>
+					<a class="permalink" href="#MockStore.CreateSession">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (m *<a href="#MockStore">MockStore</a>) CreateSession(arg0 <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, arg1 <a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#CreateSessionParams">CreateSessionParams</a>) (<a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#Session">Session</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>CreateSession mocks base method.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStore.CreateTransfer">func (*MockStore) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L100">CreateTransfer</a>
+					<a class="permalink" href="#MockStore.CreateTransfer">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (m *<a href="#MockStore">MockStore</a>) CreateTransfer(arg0 <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, arg1 <a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#CreateTransferParams">CreateTransferParams</a>) (<a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#Transfer">Transfer</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>CreateTransfer mocks base method.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStore.CreateUser">func (*MockStore) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L115">CreateUser</a>
+					<a class="permalink" href="#MockStore.CreateUser">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (m *<a href="#MockStore">MockStore</a>) CreateUser(arg0 <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, arg1 <a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#CreateUserParams">CreateUserParams</a>) (<a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#User">User</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>CreateUser mocks base method.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStore.CreateUserTx">func (*MockStore) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L130">CreateUserTx</a>
+					<a class="permalink" href="#MockStore.CreateUserTx">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (m *<a href="#MockStore">MockStore</a>) CreateUserTx(arg0 <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, arg1 <a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#CreateUserTxParams">CreateUserTxParams</a>) (<a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#CreateUserTxResult">CreateUserTxResult</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>CreateUserTx mocks base method.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStore.CreateVerifyEmail">func (*MockStore) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L145">CreateVerifyEmail</a>
+					<a class="permalink" href="#MockStore.CreateVerifyEmail">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (m *<a href="#MockStore">MockStore</a>) CreateVerifyEmail(arg0 <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, arg1 <a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#CreateVerifyEmailParams">CreateVerifyEmailParams</a>) (<a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#VerifyEmail">VerifyEmail</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>CreateVerifyEmail mocks base method.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStore.DeleteAccount">func (*MockStore) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L160">DeleteAccount</a>
+					<a class="permalink" href="#MockStore.DeleteAccount">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (m *<a href="#MockStore">MockStore</a>) DeleteAccount(arg0 <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, arg1 <a href="https://pkg.go.dev/builtin/#int64">int64</a>) <a href="https://pkg.go.dev/builtin/#error">error</a></pre>
+				<p>DeleteAccount mocks base method.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStore.EXPECT">func (*MockStore) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L35">EXPECT</a>
+					<a class="permalink" href="#MockStore.EXPECT">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (m *<a href="#MockStore">MockStore</a>) EXPECT() *<a href="#MockStoreMockRecorder">MockStoreMockRecorder</a></pre>
+				<p>EXPECT returns an object that allows the caller to indicate expected use.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStore.GetAccount">func (*MockStore) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L174">GetAccount</a>
+					<a class="permalink" href="#MockStore.GetAccount">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (m *<a href="#MockStore">MockStore</a>) GetAccount(arg0 <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, arg1 <a href="https://pkg.go.dev/builtin/#int64">int64</a>) (<a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#Account">Account</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>GetAccount mocks base method.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStore.GetAccountForUpdate">func (*MockStore) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L189">GetAccountForUpdate</a>
+					<a class="permalink" href="#MockStore.GetAccountForUpdate">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (m *<a href="#MockStore">MockStore</a>) GetAccountForUpdate(arg0 <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, arg1 <a href="https://pkg.go.dev/builtin/#int64">int64</a>) (<a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#Account">Account</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>GetAccountForUpdate mocks base method.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStore.GetEntry">func (*MockStore) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L204">GetEntry</a>
+					<a class="permalink" href="#MockStore.GetEntry">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (m *<a href="#MockStore">MockStore</a>) GetEntry(arg0 <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, arg1 <a href="https://pkg.go.dev/builtin/#int64">int64</a>) (<a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#Entry">Entry</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>GetEntry mocks base method.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStore.GetSession">func (*MockStore) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L219">GetSession</a>
+					<a class="permalink" href="#MockStore.GetSession">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (m *<a href="#MockStore">MockStore</a>) GetSession(arg0 <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, arg1 <a href="https://pkg.go.dev/github.com/google/uuid/">uuid</a>.<a href="https://pkg.go.dev/github.com/google/uuid/#UUID">UUID</a>) (<a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#Session">Session</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>GetSession mocks base method.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStore.GetTransfer">func (*MockStore) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L234">GetTransfer</a>
+					<a class="permalink" href="#MockStore.GetTransfer">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (m *<a href="#MockStore">MockStore</a>) GetTransfer(arg0 <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, arg1 <a href="https://pkg.go.dev/builtin/#int64">int64</a>) (<a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#Transfer">Transfer</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>GetTransfer mocks base method.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStore.GetUser">func (*MockStore) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L249">GetUser</a>
+					<a class="permalink" href="#MockStore.GetUser">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (m *<a href="#MockStore">MockStore</a>) GetUser(arg0 <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, arg1 <a href="https://pkg.go.dev/builtin/#string">string</a>) (<a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#User">User</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>GetUser mocks base method.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStore.ListAccounts">func (*MockStore) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L264">ListAccounts</a>
+					<a class="permalink" href="#MockStore.ListAccounts">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (m *<a href="#MockStore">MockStore</a>) ListAccounts(arg0 <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, arg1 <a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#ListAccountsParams">ListAccountsParams</a>) ([]<a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#Account">Account</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>ListAccounts mocks base method.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStore.ListEntries">func (*MockStore) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L279">ListEntries</a>
+					<a class="permalink" href="#MockStore.ListEntries">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (m *<a href="#MockStore">MockStore</a>) ListEntries(arg0 <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, arg1 <a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#ListEntriesParams">ListEntriesParams</a>) ([]<a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#Entry">Entry</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>ListEntries mocks base method.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStore.ListTransfers">func (*MockStore) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L294">ListTransfers</a>
+					<a class="permalink" href="#MockStore.ListTransfers">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (m *<a href="#MockStore">MockStore</a>) ListTransfers(arg0 <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, arg1 <a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#ListTransfersParams">ListTransfersParams</a>) ([]<a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#Transfer">Transfer</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>ListTransfers mocks base method.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStore.TransferTx">func (*MockStore) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L309">TransferTx</a>
+					<a class="permalink" href="#MockStore.TransferTx">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (m *<a href="#MockStore">MockStore</a>) TransferTx(arg0 <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, arg1 <a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#TransferTxParams">TransferTxParams</a>) (<a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#TransferTxResult">TransferTxResult</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>TransferTx mocks base method.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStore.UpdateAccount">func (*MockStore) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L324">UpdateAccount</a>
+					<a class="permalink" href="#MockStore.UpdateAccount">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (m *<a href="#MockStore">MockStore</a>) UpdateAccount(arg0 <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, arg1 <a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#UpdateAccountParams">UpdateAccountParams</a>) (<a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#Account">Account</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>UpdateAccount mocks base method.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStore.UpdateUser">func (*MockStore) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L339">UpdateUser</a>
+					<a class="permalink" href="#MockStore.UpdateUser">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (m *<a href="#MockStore">MockStore</a>) UpdateUser(arg0 <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, arg1 <a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#UpdateUserParams">UpdateUserParams</a>) (<a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#User">User</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>UpdateUser mocks base method.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStore.UpdateVerifyEmail">func (*MockStore) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L354">UpdateVerifyEmail</a>
+					<a class="permalink" href="#MockStore.UpdateVerifyEmail">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (m *<a href="#MockStore">MockStore</a>) UpdateVerifyEmail(arg0 <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, arg1 <a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#UpdateVerifyEmailParams">UpdateVerifyEmailParams</a>) (<a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#VerifyEmail">VerifyEmail</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>UpdateVerifyEmail mocks base method.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStore.VerifyEmailTx">func (*MockStore) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L369">VerifyEmailTx</a>
+					<a class="permalink" href="#MockStore.VerifyEmailTx">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (m *<a href="#MockStore">MockStore</a>) VerifyEmailTx(arg0 <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, arg1 <a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#VerifyEmailTxParams">VerifyEmailTxParams</a>) (<a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#VerifyEmailTxResult">VerifyEmailTxResult</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>VerifyEmailTx mocks base method.
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="MockStoreMockRecorder">type <a href="/src/bookkeeper/internal/db/mock/store.go.html#L23">MockStoreMockRecorder</a>
+				<a class="permalink" href="#MockStoreMockRecorder">&#xb6;</a>
+				
+				
+			</h2>
+			<p>MockStoreMockRecorder is the mock recorder for MockStore.
+
+			<pre>type MockStoreMockRecorder struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="MockStoreMockRecorder.AddAccountBalance">func (*MockStoreMockRecorder) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L49">AddAccountBalance</a>
+					<a class="permalink" href="#MockStoreMockRecorder.AddAccountBalance">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mr *<a href="#MockStoreMockRecorder">MockStoreMockRecorder</a>) AddAccountBalance(arg0, arg1 interface{}) *<a href="https://pkg.go.dev/github.com/golang/mock/gomock/">gomock</a>.<a href="https://pkg.go.dev/github.com/golang/mock/gomock/#Call">Call</a></pre>
+				<p>AddAccountBalance indicates an expected call of AddAccountBalance.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStoreMockRecorder.CreateAccount">func (*MockStoreMockRecorder) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L64">CreateAccount</a>
+					<a class="permalink" href="#MockStoreMockRecorder.CreateAccount">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mr *<a href="#MockStoreMockRecorder">MockStoreMockRecorder</a>) CreateAccount(arg0, arg1 interface{}) *<a href="https://pkg.go.dev/github.com/golang/mock/gomock/">gomock</a>.<a href="https://pkg.go.dev/github.com/golang/mock/gomock/#Call">Call</a></pre>
+				<p>CreateAccount indicates an expected call of CreateAccount.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStoreMockRecorder.CreateEntry">func (*MockStoreMockRecorder) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L79">CreateEntry</a>
+					<a class="permalink" href="#MockStoreMockRecorder.CreateEntry">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mr *<a href="#MockStoreMockRecorder">MockStoreMockRecorder</a>) CreateEntry(arg0, arg1 interface{}) *<a href="https://pkg.go.dev/github.com/golang/mock/gomock/">gomock</a>.<a href="https://pkg.go.dev/github.com/golang/mock/gomock/#Call">Call</a></pre>
+				<p>CreateEntry indicates an expected call of CreateEntry.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStoreMockRecorder.CreateSession">func (*MockStoreMockRecorder) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L94">CreateSession</a>
+					<a class="permalink" href="#MockStoreMockRecorder.CreateSession">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mr *<a href="#MockStoreMockRecorder">MockStoreMockRecorder</a>) CreateSession(arg0, arg1 interface{}) *<a href="https://pkg.go.dev/github.com/golang/mock/gomock/">gomock</a>.<a href="https://pkg.go.dev/github.com/golang/mock/gomock/#Call">Call</a></pre>
+				<p>CreateSession indicates an expected call of CreateSession.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStoreMockRecorder.CreateTransfer">func (*MockStoreMockRecorder) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L109">CreateTransfer</a>
+					<a class="permalink" href="#MockStoreMockRecorder.CreateTransfer">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mr *<a href="#MockStoreMockRecorder">MockStoreMockRecorder</a>) CreateTransfer(arg0, arg1 interface{}) *<a href="https://pkg.go.dev/github.com/golang/mock/gomock/">gomock</a>.<a href="https://pkg.go.dev/github.com/golang/mock/gomock/#Call">Call</a></pre>
+				<p>CreateTransfer indicates an expected call of CreateTransfer.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStoreMockRecorder.CreateUser">func (*MockStoreMockRecorder) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L124">CreateUser</a>
+					<a class="permalink" href="#MockStoreMockRecorder.CreateUser">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mr *<a href="#MockStoreMockRecorder">MockStoreMockRecorder</a>) CreateUser(arg0, arg1 interface{}) *<a href="https://pkg.go.dev/github.com/golang/mock/gomock/">gomock</a>.<a href="https://pkg.go.dev/github.com/golang/mock/gomock/#Call">Call</a></pre>
+				<p>CreateUser indicates an expected call of CreateUser.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStoreMockRecorder.CreateUserTx">func (*MockStoreMockRecorder) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L139">CreateUserTx</a>
+					<a class="permalink" href="#MockStoreMockRecorder.CreateUserTx">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mr *<a href="#MockStoreMockRecorder">MockStoreMockRecorder</a>) CreateUserTx(arg0, arg1 interface{}) *<a href="https://pkg.go.dev/github.com/golang/mock/gomock/">gomock</a>.<a href="https://pkg.go.dev/github.com/golang/mock/gomock/#Call">Call</a></pre>
+				<p>CreateUserTx indicates an expected call of CreateUserTx.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStoreMockRecorder.CreateVerifyEmail">func (*MockStoreMockRecorder) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L154">CreateVerifyEmail</a>
+					<a class="permalink" href="#MockStoreMockRecorder.CreateVerifyEmail">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mr *<a href="#MockStoreMockRecorder">MockStoreMockRecorder</a>) CreateVerifyEmail(arg0, arg1 interface{}) *<a href="https://pkg.go.dev/github.com/golang/mock/gomock/">gomock</a>.<a href="https://pkg.go.dev/github.com/golang/mock/gomock/#Call">Call</a></pre>
+				<p>CreateVerifyEmail indicates an expected call of CreateVerifyEmail.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStoreMockRecorder.DeleteAccount">func (*MockStoreMockRecorder) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L168">DeleteAccount</a>
+					<a class="permalink" href="#MockStoreMockRecorder.DeleteAccount">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mr *<a href="#MockStoreMockRecorder">MockStoreMockRecorder</a>) DeleteAccount(arg0, arg1 interface{}) *<a href="https://pkg.go.dev/github.com/golang/mock/gomock/">gomock</a>.<a href="https://pkg.go.dev/github.com/golang/mock/gomock/#Call">Call</a></pre>
+				<p>DeleteAccount indicates an expected call of DeleteAccount.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStoreMockRecorder.GetAccount">func (*MockStoreMockRecorder) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L183">GetAccount</a>
+					<a class="permalink" href="#MockStoreMockRecorder.GetAccount">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mr *<a href="#MockStoreMockRecorder">MockStoreMockRecorder</a>) GetAccount(arg0, arg1 interface{}) *<a href="https://pkg.go.dev/github.com/golang/mock/gomock/">gomock</a>.<a href="https://pkg.go.dev/github.com/golang/mock/gomock/#Call">Call</a></pre>
+				<p>GetAccount indicates an expected call of GetAccount.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStoreMockRecorder.GetAccountForUpdate">func (*MockStoreMockRecorder) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L198">GetAccountForUpdate</a>
+					<a class="permalink" href="#MockStoreMockRecorder.GetAccountForUpdate">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mr *<a href="#MockStoreMockRecorder">MockStoreMockRecorder</a>) GetAccountForUpdate(arg0, arg1 interface{}) *<a href="https://pkg.go.dev/github.com/golang/mock/gomock/">gomock</a>.<a href="https://pkg.go.dev/github.com/golang/mock/gomock/#Call">Call</a></pre>
+				<p>GetAccountForUpdate indicates an expected call of GetAccountForUpdate.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStoreMockRecorder.GetEntry">func (*MockStoreMockRecorder) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L213">GetEntry</a>
+					<a class="permalink" href="#MockStoreMockRecorder.GetEntry">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mr *<a href="#MockStoreMockRecorder">MockStoreMockRecorder</a>) GetEntry(arg0, arg1 interface{}) *<a href="https://pkg.go.dev/github.com/golang/mock/gomock/">gomock</a>.<a href="https://pkg.go.dev/github.com/golang/mock/gomock/#Call">Call</a></pre>
+				<p>GetEntry indicates an expected call of GetEntry.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStoreMockRecorder.GetSession">func (*MockStoreMockRecorder) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L228">GetSession</a>
+					<a class="permalink" href="#MockStoreMockRecorder.GetSession">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mr *<a href="#MockStoreMockRecorder">MockStoreMockRecorder</a>) GetSession(arg0, arg1 interface{}) *<a href="https://pkg.go.dev/github.com/golang/mock/gomock/">gomock</a>.<a href="https://pkg.go.dev/github.com/golang/mock/gomock/#Call">Call</a></pre>
+				<p>GetSession indicates an expected call of GetSession.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStoreMockRecorder.GetTransfer">func (*MockStoreMockRecorder) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L243">GetTransfer</a>
+					<a class="permalink" href="#MockStoreMockRecorder.GetTransfer">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mr *<a href="#MockStoreMockRecorder">MockStoreMockRecorder</a>) GetTransfer(arg0, arg1 interface{}) *<a href="https://pkg.go.dev/github.com/golang/mock/gomock/">gomock</a>.<a href="https://pkg.go.dev/github.com/golang/mock/gomock/#Call">Call</a></pre>
+				<p>GetTransfer indicates an expected call of GetTransfer.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStoreMockRecorder.GetUser">func (*MockStoreMockRecorder) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L258">GetUser</a>
+					<a class="permalink" href="#MockStoreMockRecorder.GetUser">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mr *<a href="#MockStoreMockRecorder">MockStoreMockRecorder</a>) GetUser(arg0, arg1 interface{}) *<a href="https://pkg.go.dev/github.com/golang/mock/gomock/">gomock</a>.<a href="https://pkg.go.dev/github.com/golang/mock/gomock/#Call">Call</a></pre>
+				<p>GetUser indicates an expected call of GetUser.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStoreMockRecorder.ListAccounts">func (*MockStoreMockRecorder) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L273">ListAccounts</a>
+					<a class="permalink" href="#MockStoreMockRecorder.ListAccounts">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mr *<a href="#MockStoreMockRecorder">MockStoreMockRecorder</a>) ListAccounts(arg0, arg1 interface{}) *<a href="https://pkg.go.dev/github.com/golang/mock/gomock/">gomock</a>.<a href="https://pkg.go.dev/github.com/golang/mock/gomock/#Call">Call</a></pre>
+				<p>ListAccounts indicates an expected call of ListAccounts.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStoreMockRecorder.ListEntries">func (*MockStoreMockRecorder) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L288">ListEntries</a>
+					<a class="permalink" href="#MockStoreMockRecorder.ListEntries">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mr *<a href="#MockStoreMockRecorder">MockStoreMockRecorder</a>) ListEntries(arg0, arg1 interface{}) *<a href="https://pkg.go.dev/github.com/golang/mock/gomock/">gomock</a>.<a href="https://pkg.go.dev/github.com/golang/mock/gomock/#Call">Call</a></pre>
+				<p>ListEntries indicates an expected call of ListEntries.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStoreMockRecorder.ListTransfers">func (*MockStoreMockRecorder) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L303">ListTransfers</a>
+					<a class="permalink" href="#MockStoreMockRecorder.ListTransfers">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mr *<a href="#MockStoreMockRecorder">MockStoreMockRecorder</a>) ListTransfers(arg0, arg1 interface{}) *<a href="https://pkg.go.dev/github.com/golang/mock/gomock/">gomock</a>.<a href="https://pkg.go.dev/github.com/golang/mock/gomock/#Call">Call</a></pre>
+				<p>ListTransfers indicates an expected call of ListTransfers.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStoreMockRecorder.TransferTx">func (*MockStoreMockRecorder) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L318">TransferTx</a>
+					<a class="permalink" href="#MockStoreMockRecorder.TransferTx">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mr *<a href="#MockStoreMockRecorder">MockStoreMockRecorder</a>) TransferTx(arg0, arg1 interface{}) *<a href="https://pkg.go.dev/github.com/golang/mock/gomock/">gomock</a>.<a href="https://pkg.go.dev/github.com/golang/mock/gomock/#Call">Call</a></pre>
+				<p>TransferTx indicates an expected call of TransferTx.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStoreMockRecorder.UpdateAccount">func (*MockStoreMockRecorder) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L333">UpdateAccount</a>
+					<a class="permalink" href="#MockStoreMockRecorder.UpdateAccount">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mr *<a href="#MockStoreMockRecorder">MockStoreMockRecorder</a>) UpdateAccount(arg0, arg1 interface{}) *<a href="https://pkg.go.dev/github.com/golang/mock/gomock/">gomock</a>.<a href="https://pkg.go.dev/github.com/golang/mock/gomock/#Call">Call</a></pre>
+				<p>UpdateAccount indicates an expected call of UpdateAccount.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStoreMockRecorder.UpdateUser">func (*MockStoreMockRecorder) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L348">UpdateUser</a>
+					<a class="permalink" href="#MockStoreMockRecorder.UpdateUser">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mr *<a href="#MockStoreMockRecorder">MockStoreMockRecorder</a>) UpdateUser(arg0, arg1 interface{}) *<a href="https://pkg.go.dev/github.com/golang/mock/gomock/">gomock</a>.<a href="https://pkg.go.dev/github.com/golang/mock/gomock/#Call">Call</a></pre>
+				<p>UpdateUser indicates an expected call of UpdateUser.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStoreMockRecorder.UpdateVerifyEmail">func (*MockStoreMockRecorder) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L363">UpdateVerifyEmail</a>
+					<a class="permalink" href="#MockStoreMockRecorder.UpdateVerifyEmail">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mr *<a href="#MockStoreMockRecorder">MockStoreMockRecorder</a>) UpdateVerifyEmail(arg0, arg1 interface{}) *<a href="https://pkg.go.dev/github.com/golang/mock/gomock/">gomock</a>.<a href="https://pkg.go.dev/github.com/golang/mock/gomock/#Call">Call</a></pre>
+				<p>UpdateVerifyEmail indicates an expected call of UpdateVerifyEmail.
+
+				
+				
+				
+			
+				
+				<h3 id="MockStoreMockRecorder.VerifyEmailTx">func (*MockStoreMockRecorder) <a href="/src/bookkeeper/internal/db/mock/store.go.html#L378">VerifyEmailTx</a>
+					<a class="permalink" href="#MockStoreMockRecorder.VerifyEmailTx">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mr *<a href="#MockStoreMockRecorder">MockStoreMockRecorder</a>) VerifyEmailTx(arg0, arg1 interface{}) *<a href="https://pkg.go.dev/github.com/golang/mock/gomock/">gomock</a>.<a href="https://pkg.go.dev/github.com/golang/mock/gomock/#Call">Call</a></pre>
+				<p>VerifyEmailTx indicates an expected call of VerifyEmailTx.
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.20.5.<br>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

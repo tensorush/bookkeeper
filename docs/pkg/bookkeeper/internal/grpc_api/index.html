@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>grpc_api - GoPages</title>
+
+<link type="text/css" rel="stylesheet" href="/lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="/lib/godoc/jquery.js" defer></script>
+
+
+
+
+<script>var goVersion = "go1.20.5";</script>
+<script src="/lib/godoc/godocs.js" defer></script>
+
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="/pkg/bookkeeper/">GoPages | Auto-generated docs</a></div>
+<div class="top-heading" id="heading-narrow"><a href="/pkg/bookkeeper/">GoPages</a></div>
+<a href="#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package grpc_api
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "bookkeeper/internal/grpc_api"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="#GrpcLogger">func GrpcLogger(ctx context.Context, req interface{}, info *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (resp interface{}, err error)</a></dd>
+			
+				
+				<dd><a href="#HttpLogger">func HttpLogger(handler http.Handler) http.Handler</a></dd>
+			
+			
+				
+				<dd><a href="#Metadata">type Metadata</a></dd>
+				
+				
+			
+				
+				<dd><a href="#ResponseRecorder">type ResponseRecorder</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ResponseRecorder.Write">func (rec *ResponseRecorder) Write(body []byte) (int, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ResponseRecorder.WriteHeader">func (rec *ResponseRecorder) WriteHeader(statusCode int)</a></dd>
+				
+			
+				
+				<dd><a href="#Server">type Server</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewServer">func NewServer(config configs.Config, store db.Store, taskDistributor worker.TaskDistributor) (*Server, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Server.CreateUser">func (server *Server) CreateUser(ctx context.Context, req *protogen.CreateUserRequest) (*protogen.CreateUserResponse, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Server.LoginUser">func (server *Server) LoginUser(ctx context.Context, req *protogen.LoginUserRequest) (*protogen.LoginUserResponse, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Server.UpdateUser">func (server *Server) UpdateUser(ctx context.Context, req *protogen.UpdateUserRequest) (*protogen.UpdateUserResponse, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Server.VerifyEmail">func (server *Server) VerifyEmail(ctx context.Context, req *protogen.VerifyEmailRequest) (*protogen.VerifyEmailResponse, error)</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/bookkeeper/internal/grpc_api/authorization.go.html">authorization.go</a>
+			
+				<a href="/src/bookkeeper/internal/grpc_api/converter.go.html">converter.go</a>
+			
+				<a href="/src/bookkeeper/internal/grpc_api/error.go.html">error.go</a>
+			
+				<a href="/src/bookkeeper/internal/grpc_api/logger.go.html">logger.go</a>
+			
+				<a href="/src/bookkeeper/internal/grpc_api/metadata.go.html">metadata.go</a>
+			
+				<a href="/src/bookkeeper/internal/grpc_api/rpc_create_user.go.html">rpc_create_user.go</a>
+			
+				<a href="/src/bookkeeper/internal/grpc_api/rpc_login_user.go.html">rpc_login_user.go</a>
+			
+				<a href="/src/bookkeeper/internal/grpc_api/rpc_update_user.go.html">rpc_update_user.go</a>
+			
+				<a href="/src/bookkeeper/internal/grpc_api/rpc_verify_email.go.html">rpc_verify_email.go</a>
+			
+				<a href="/src/bookkeeper/internal/grpc_api/server.go.html">server.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+			
+			
+			<h2 id="GrpcLogger">func <a href="/src/bookkeeper/internal/grpc_api/logger.go.html#L14">GrpcLogger</a>
+				<a class="permalink" href="#GrpcLogger">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func GrpcLogger(
+    ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>,
+    req interface{},
+    info *<a href="https://pkg.go.dev/google.golang.org/grpc/">grpc</a>.<a href="https://pkg.go.dev/google.golang.org/grpc/#UnaryServerInfo">UnaryServerInfo</a>,
+    handler <a href="https://pkg.go.dev/google.golang.org/grpc/">grpc</a>.<a href="https://pkg.go.dev/google.golang.org/grpc/#UnaryHandler">UnaryHandler</a>,
+) (resp interface{}, err <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="HttpLogger">func <a href="/src/bookkeeper/internal/grpc_api/logger.go.html#L60">HttpLogger</a>
+				<a class="permalink" href="#HttpLogger">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func HttpLogger(handler <a href="https://pkg.go.dev/net/http/">http</a>.<a href="https://pkg.go.dev/net/http/#Handler">Handler</a>) <a href="https://pkg.go.dev/net/http/">http</a>.<a href="https://pkg.go.dev/net/http/#Handler">Handler</a></pre>
+			
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Metadata">type <a href="/src/bookkeeper/internal/grpc_api/metadata.go.html#L16">Metadata</a>
+				<a class="permalink" href="#Metadata">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type Metadata struct {
+<span id="Metadata.UserAgent"></span>    UserAgent <a href="https://pkg.go.dev/builtin/#string">string</a>
+<span id="Metadata.ClientIP"></span>    ClientIP  <a href="https://pkg.go.dev/builtin/#string">string</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ResponseRecorder">type <a href="/src/bookkeeper/internal/grpc_api/logger.go.html#L44">ResponseRecorder</a>
+				<a class="permalink" href="#ResponseRecorder">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type ResponseRecorder struct {
+    <a href="https://pkg.go.dev/net/http/">http</a>.<a href="https://pkg.go.dev/net/http/#ResponseWriter">ResponseWriter</a>
+<span id="ResponseRecorder.StatusCode"></span>    StatusCode <a href="https://pkg.go.dev/builtin/#int">int</a>
+<span id="ResponseRecorder.Body"></span>    Body       []<a href="https://pkg.go.dev/builtin/#byte">byte</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ResponseRecorder.Write">func (*ResponseRecorder) <a href="/src/bookkeeper/internal/grpc_api/logger.go.html#L55">Write</a>
+					<a class="permalink" href="#ResponseRecorder.Write">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (rec *<a href="#ResponseRecorder">ResponseRecorder</a>) Write(body []<a href="https://pkg.go.dev/builtin/#byte">byte</a>) (<a href="https://pkg.go.dev/builtin/#int">int</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ResponseRecorder.WriteHeader">func (*ResponseRecorder) <a href="/src/bookkeeper/internal/grpc_api/logger.go.html#L50">WriteHeader</a>
+					<a class="permalink" href="#ResponseRecorder.WriteHeader">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (rec *<a href="#ResponseRecorder">ResponseRecorder</a>) WriteHeader(statusCode <a href="https://pkg.go.dev/builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Server">type <a href="/src/bookkeeper/internal/grpc_api/server.go.html#L14">Server</a>
+				<a class="permalink" href="#Server">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Server serves gRPC requests for our banking service.
+
+			<pre>type Server struct {
+    <a href="/pkg/bookkeeper/internal/protogen/">protogen</a>.<a href="/pkg/bookkeeper/internal/protogen/#UnimplementedBookkeeperServer">UnimplementedBookkeeperServer</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewServer">func <a href="/src/bookkeeper/internal/grpc_api/server.go.html#L23">NewServer</a>
+					<a class="permalink" href="#NewServer">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewServer(config <a href="/pkg/bookkeeper/configs/">configs</a>.<a href="/pkg/bookkeeper/configs/#Config">Config</a>, store <a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#Store">Store</a>, taskDistributor <a href="/pkg/bookkeeper/internal/worker/">worker</a>.<a href="/pkg/bookkeeper/internal/worker/#TaskDistributor">TaskDistributor</a>) (*<a href="#Server">Server</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				<p>NewServer creates a new gRPC server.
+
+				
+				
+			
+
+			
+				
+				<h3 id="Server.CreateUser">func (*Server) <a href="/src/bookkeeper/internal/grpc_api/rpc_create_user.go.html#L18">CreateUser</a>
+					<a class="permalink" href="#Server.CreateUser">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (server *<a href="#Server">Server</a>) CreateUser(ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, req *<a href="/pkg/bookkeeper/internal/protogen/">protogen</a>.<a href="/pkg/bookkeeper/internal/protogen/#CreateUserRequest">CreateUserRequest</a>) (*<a href="/pkg/bookkeeper/internal/protogen/">protogen</a>.<a href="/pkg/bookkeeper/internal/protogen/#CreateUserResponse">CreateUserResponse</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Server.LoginUser">func (*Server) <a href="/src/bookkeeper/internal/grpc_api/rpc_login_user.go.html#L17">LoginUser</a>
+					<a class="permalink" href="#Server.LoginUser">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (server *<a href="#Server">Server</a>) LoginUser(ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, req *<a href="/pkg/bookkeeper/internal/protogen/">protogen</a>.<a href="/pkg/bookkeeper/internal/protogen/#LoginUserRequest">LoginUserRequest</a>) (*<a href="/pkg/bookkeeper/internal/protogen/">protogen</a>.<a href="/pkg/bookkeeper/internal/protogen/#LoginUserResponse">LoginUserResponse</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Server.UpdateUser">func (*Server) <a href="/src/bookkeeper/internal/grpc_api/rpc_update_user.go.html#L18">UpdateUser</a>
+					<a class="permalink" href="#Server.UpdateUser">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (server *<a href="#Server">Server</a>) UpdateUser(ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, req *<a href="/pkg/bookkeeper/internal/protogen/">protogen</a>.<a href="/pkg/bookkeeper/internal/protogen/#UpdateUserRequest">UpdateUserRequest</a>) (*<a href="/pkg/bookkeeper/internal/protogen/">protogen</a>.<a href="/pkg/bookkeeper/internal/protogen/#UpdateUserResponse">UpdateUserResponse</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Server.VerifyEmail">func (*Server) <a href="/src/bookkeeper/internal/grpc_api/rpc_verify_email.go.html#L15">VerifyEmail</a>
+					<a class="permalink" href="#Server.VerifyEmail">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (server *<a href="#Server">Server</a>) VerifyEmail(ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, req *<a href="/pkg/bookkeeper/internal/protogen/">protogen</a>.<a href="/pkg/bookkeeper/internal/protogen/#VerifyEmailRequest">VerifyEmailRequest</a>) (*<a href="/pkg/bookkeeper/internal/protogen/">protogen</a>.<a href="/pkg/bookkeeper/internal/protogen/#VerifyEmailResponse">VerifyEmailResponse</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.20.5.<br>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>worker - GoPages</title>
+
+<link type="text/css" rel="stylesheet" href="/lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="/lib/godoc/jquery.js" defer></script>
+
+
+
+
+<script>var goVersion = "go1.20.5";</script>
+<script src="/lib/godoc/godocs.js" defer></script>
+
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="/pkg/bookkeeper/">GoPages | Auto-generated docs</a></div>
+<div class="top-heading" id="heading-narrow"><a href="/pkg/bookkeeper/">GoPages</a></div>
+<a href="#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package worker
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "bookkeeper/internal/worker"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="#pkg-constants">Constants</a></dd>
+			
+			
+			
+			
+				
+				<dd><a href="#Logger">type Logger</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewLogger">func NewLogger() *Logger</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Logger.Debug">func (logger *Logger) Debug(args ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Logger.Error">func (logger *Logger) Error(args ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Logger.Fatal">func (logger *Logger) Fatal(args ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Logger.Info">func (logger *Logger) Info(args ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Logger.Print">func (logger *Logger) Print(level zerolog.Level, args ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Logger.Printf">func (logger *Logger) Printf(ctx context.Context, format string, v ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Logger.Warn">func (logger *Logger) Warn(args ...interface{})</a></dd>
+				
+			
+				
+				<dd><a href="#PayloadSendVerifyEmail">type PayloadSendVerifyEmail</a></dd>
+				
+				
+			
+				
+				<dd><a href="#RedisTaskDistributor">type RedisTaskDistributor</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#RedisTaskDistributor.DistributeTaskSendVerifyEmail">func (distributor *RedisTaskDistributor) DistributeTaskSendVerifyEmail(ctx context.Context, payload *PayloadSendVerifyEmail, opts ...asynq.Option) error</a></dd>
+				
+			
+				
+				<dd><a href="#RedisTaskProcessor">type RedisTaskProcessor</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#RedisTaskProcessor.ProcessTaskSendVerifyEmail">func (processor *RedisTaskProcessor) ProcessTaskSendVerifyEmail(ctx context.Context, task *asynq.Task) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#RedisTaskProcessor.Start">func (processor *RedisTaskProcessor) Start() error</a></dd>
+				
+			
+				
+				<dd><a href="#TaskDistributor">type TaskDistributor</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewRedisTaskDistributor">func NewRedisTaskDistributor(redisOpt asynq.RedisClientOpt) TaskDistributor</a></dd>
+				
+				
+			
+				
+				<dd><a href="#TaskProcessor">type TaskProcessor</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewRedisTaskProcessor">func NewRedisTaskProcessor(redisOpt asynq.RedisClientOpt, store db.Store, mailer notifications.EmailSender) TaskProcessor</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/bookkeeper/internal/worker/distributor.go.html">distributor.go</a>
+			
+				<a href="/src/bookkeeper/internal/worker/logger.go.html">logger.go</a>
+			
+				<a href="/src/bookkeeper/internal/worker/processor.go.html">processor.go</a>
+			
+				<a href="/src/bookkeeper/internal/worker/task_send_verify_email.go.html">task_send_verify_email.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span id="QueueCritical">QueueCritical</span> = &#34;critical&#34;
+    <span id="QueueDefault">QueueDefault</span>  = &#34;default&#34;
+)</pre>
+			
+				
+				<pre>const <span id="TaskSendVerifyEmail">TaskSendVerifyEmail</span> = &#34;task:send_verify_email&#34;</pre>
+			
+		
+		
+		
+		
+			
+			
+			<h2 id="Logger">type <a href="/src/bookkeeper/internal/worker/logger.go.html#L11">Logger</a>
+				<a class="permalink" href="#Logger">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type Logger struct{}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewLogger">func <a href="/src/bookkeeper/internal/worker/logger.go.html#L13">NewLogger</a>
+					<a class="permalink" href="#NewLogger">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewLogger() *<a href="#Logger">Logger</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="Logger.Debug">func (*Logger) <a href="/src/bookkeeper/internal/worker/logger.go.html#L25">Debug</a>
+					<a class="permalink" href="#Logger.Debug">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (logger *<a href="#Logger">Logger</a>) Debug(args ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Logger.Error">func (*Logger) <a href="/src/bookkeeper/internal/worker/logger.go.html#L37">Error</a>
+					<a class="permalink" href="#Logger.Error">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (logger *<a href="#Logger">Logger</a>) Error(args ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Logger.Fatal">func (*Logger) <a href="/src/bookkeeper/internal/worker/logger.go.html#L41">Fatal</a>
+					<a class="permalink" href="#Logger.Fatal">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (logger *<a href="#Logger">Logger</a>) Fatal(args ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Logger.Info">func (*Logger) <a href="/src/bookkeeper/internal/worker/logger.go.html#L29">Info</a>
+					<a class="permalink" href="#Logger.Info">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (logger *<a href="#Logger">Logger</a>) Info(args ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Logger.Print">func (*Logger) <a href="/src/bookkeeper/internal/worker/logger.go.html#L17">Print</a>
+					<a class="permalink" href="#Logger.Print">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (logger *<a href="#Logger">Logger</a>) Print(level <a href="https://pkg.go.dev/github.com/rs/zerolog/">zerolog</a>.<a href="https://pkg.go.dev/github.com/rs/zerolog/#Level">Level</a>, args ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Logger.Printf">func (*Logger) <a href="/src/bookkeeper/internal/worker/logger.go.html#L21">Printf</a>
+					<a class="permalink" href="#Logger.Printf">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (logger *<a href="#Logger">Logger</a>) Printf(ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, format <a href="https://pkg.go.dev/builtin/#string">string</a>, v ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Logger.Warn">func (*Logger) <a href="/src/bookkeeper/internal/worker/logger.go.html#L33">Warn</a>
+					<a class="permalink" href="#Logger.Warn">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (logger *<a href="#Logger">Logger</a>) Warn(args ...interface{})</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PayloadSendVerifyEmail">type <a href="/src/bookkeeper/internal/worker/task_send_verify_email.go.html#L17">PayloadSendVerifyEmail</a>
+				<a class="permalink" href="#PayloadSendVerifyEmail">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type PayloadSendVerifyEmail struct {
+<span id="PayloadSendVerifyEmail.Username"></span>    Username <a href="https://pkg.go.dev/builtin/#string">string</a> `json:&#34;username&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="RedisTaskDistributor">type <a href="/src/bookkeeper/internal/worker/distributor.go.html#L17">RedisTaskDistributor</a>
+				<a class="permalink" href="#RedisTaskDistributor">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type RedisTaskDistributor struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="RedisTaskDistributor.DistributeTaskSendVerifyEmail">func (*RedisTaskDistributor) <a href="/src/bookkeeper/internal/worker/task_send_verify_email.go.html#L21">DistributeTaskSendVerifyEmail</a>
+					<a class="permalink" href="#RedisTaskDistributor.DistributeTaskSendVerifyEmail">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (distributor *<a href="#RedisTaskDistributor">RedisTaskDistributor</a>) DistributeTaskSendVerifyEmail(
+    ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>,
+    payload *<a href="#PayloadSendVerifyEmail">PayloadSendVerifyEmail</a>,
+    opts ...<a href="https://pkg.go.dev/github.com/hibiken/asynq/">asynq</a>.<a href="https://pkg.go.dev/github.com/hibiken/asynq/#Option">Option</a>,
+) <a href="https://pkg.go.dev/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="RedisTaskProcessor">type <a href="/src/bookkeeper/internal/worker/processor.go.html#L24">RedisTaskProcessor</a>
+				<a class="permalink" href="#RedisTaskProcessor">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type RedisTaskProcessor struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="RedisTaskProcessor.ProcessTaskSendVerifyEmail">func (*RedisTaskProcessor) <a href="/src/bookkeeper/internal/worker/task_send_verify_email.go.html#L42">ProcessTaskSendVerifyEmail</a>
+					<a class="permalink" href="#RedisTaskProcessor.ProcessTaskSendVerifyEmail">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (processor *<a href="#RedisTaskProcessor">RedisTaskProcessor</a>) ProcessTaskSendVerifyEmail(ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, task *<a href="https://pkg.go.dev/github.com/hibiken/asynq/">asynq</a>.<a href="https://pkg.go.dev/github.com/hibiken/asynq/#Task">Task</a>) <a href="https://pkg.go.dev/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="RedisTaskProcessor.Start">func (*RedisTaskProcessor) <a href="/src/bookkeeper/internal/worker/processor.go.html#L56">Start</a>
+					<a class="permalink" href="#RedisTaskProcessor.Start">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (processor *<a href="#RedisTaskProcessor">RedisTaskProcessor</a>) Start() <a href="https://pkg.go.dev/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="TaskDistributor">type <a href="/src/bookkeeper/internal/worker/distributor.go.html#L9">TaskDistributor</a>
+				<a class="permalink" href="#TaskDistributor">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type TaskDistributor interface {
+    DistributeTaskSendVerifyEmail(
+        ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>,
+        payload *<a href="#PayloadSendVerifyEmail">PayloadSendVerifyEmail</a>,
+        opts ...<a href="https://pkg.go.dev/github.com/hibiken/asynq/">asynq</a>.<a href="https://pkg.go.dev/github.com/hibiken/asynq/#Option">Option</a>,
+    ) <a href="https://pkg.go.dev/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewRedisTaskDistributor">func <a href="/src/bookkeeper/internal/worker/distributor.go.html#L21">NewRedisTaskDistributor</a>
+					<a class="permalink" href="#NewRedisTaskDistributor">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewRedisTaskDistributor(redisOpt <a href="https://pkg.go.dev/github.com/hibiken/asynq/">asynq</a>.<a href="https://pkg.go.dev/github.com/hibiken/asynq/#RedisClientOpt">RedisClientOpt</a>) <a href="#TaskDistributor">TaskDistributor</a></pre>
+				
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="TaskProcessor">type <a href="/src/bookkeeper/internal/worker/processor.go.html#L19">TaskProcessor</a>
+				<a class="permalink" href="#TaskProcessor">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type TaskProcessor interface {
+    Start() <a href="https://pkg.go.dev/builtin/#error">error</a>
+    ProcessTaskSendVerifyEmail(ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, task *<a href="https://pkg.go.dev/github.com/hibiken/asynq/">asynq</a>.<a href="https://pkg.go.dev/github.com/hibiken/asynq/#Task">Task</a>) <a href="https://pkg.go.dev/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewRedisTaskProcessor">func <a href="/src/bookkeeper/internal/worker/processor.go.html#L30">NewRedisTaskProcessor</a>
+					<a class="permalink" href="#NewRedisTaskProcessor">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewRedisTaskProcessor(redisOpt <a href="https://pkg.go.dev/github.com/hibiken/asynq/">asynq</a>.<a href="https://pkg.go.dev/github.com/hibiken/asynq/#RedisClientOpt">RedisClientOpt</a>, store <a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#Store">Store</a>, mailer <a href="/pkg/bookkeeper/internal/notifications/">notifications</a>.<a href="/pkg/bookkeeper/internal/notifications/#EmailSender">EmailSender</a>) <a href="#TaskProcessor">TaskProcessor</a></pre>
+				
+				
+				
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	<div class="pkg-dir">
+		<table>
+			<tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="..">..</a></td>
+			</tr>
+			
+
+			
+		</table>
+	</div>
+
+
+
+<div id="footer">
+Build version go1.20.5.<br>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>
