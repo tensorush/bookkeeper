@@ -105,6 +105,8 @@
 			<div id="manual-nav">
 			<dl>
 			
+				<dd><a href="#pkg-constants">Constants</a></dd>
+			
 			
 			
 			
@@ -145,6 +147,15 @@
 
 		
 
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span id="smtpAuthAddress">smtpAuthAddress</span>   = &#34;smtp.gmail.com&#34;
+    <span id="smtpServerAddress">smtpServerAddress</span> = &#34;smtp.gmail.com:587&#34;
+)</pre>
+			
 		
 		
 		
@@ -200,7 +211,9 @@
 			</h2>
 			
 			<pre>type GmailSender struct {
-    <span class="comment">// contains filtered or unexported fields</span>
+<span id="GmailSender.name"></span>    name              <a href="https://pkg.go.dev/builtin/#string">string</a>
+<span id="GmailSender.fromEmailAddress"></span>    fromEmailAddress  <a href="https://pkg.go.dev/builtin/#string">string</a>
+<span id="GmailSender.fromEmailPassword"></span>    fromEmailPassword <a href="https://pkg.go.dev/builtin/#string">string</a>
 }
 </pre>
 

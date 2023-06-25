@@ -108,6 +108,8 @@
 				<dd><a href="#pkg-constants">Constants</a></dd>
 			
 			
+				<dd><a href="#pkg-variables">Variables</a></dd>
+			
 			
 				
 				<dd><a href="#CheckPassword">func CheckPassword(password string, hashedPassword string) error</a></dd>
@@ -157,6 +159,9 @@
 				
 				<dd><a href="#ValidateUsername">func ValidateUsername(value string) error</a></dd>
 			
+				
+				<dd><a href="#init">func init()</a></dd>
+			
 			
 			
 			</dl>
@@ -196,7 +201,22 @@
     <span id="CAD">CAD</span> = &#34;CAD&#34;
 )</pre>
 			
+				
+				<pre>const <span id="alphabet">alphabet</span> = &#34;abcdefghijklmnopqrstuvwxyz&#34;</pre>
+			
 		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				
+				<pre>var (
+    <span id="isValidUsername">isValidUsername</span> = <a href="https://pkg.go.dev/regexp/">regexp</a>.<a href="https://pkg.go.dev/regexp/#MustCompile">MustCompile</a>(`^[a-z0-9_]+$`).<a href="#MatchString">MatchString</a>
+    <span id="isValidFullName">isValidFullName</span> = <a href="https://pkg.go.dev/regexp/">regexp</a>.<a href="https://pkg.go.dev/regexp/#MustCompile">MustCompile</a>(`^[a-zA-Z\s]+$`).<a href="#MatchString">MatchString</a>
+)</pre>
+			
+				
+				<pre>var <span id="r">r</span> *<a href="https://pkg.go.dev/math/rand/">rand</a>.<a href="https://pkg.go.dev/math/rand/#Rand">Rand</a></pre>
+			
 		
 		
 			
@@ -411,6 +431,19 @@
 				
 			</h2>
 			<pre>func ValidateUsername(value <a href="https://pkg.go.dev/builtin/#string">string</a>) <a href="https://pkg.go.dev/builtin/#error">error</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="init">func <a href="/src/bookkeeper/internal/utils/random.go.html#L14">init</a>
+				<a class="permalink" href="#init">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func init()</pre>
 			
 			
 			

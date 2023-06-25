@@ -298,7 +298,8 @@
 			<p>MockStore is a mock of Store interface.
 
 			<pre>type MockStore struct {
-    <span class="comment">// contains filtered or unexported fields</span>
+<span id="MockStore.ctrl"></span>    ctrl     *<a href="https://pkg.go.dev/github.com/golang/mock/gomock/">gomock</a>.<a href="https://pkg.go.dev/github.com/golang/mock/gomock/#Controller">Controller</a>
+<span id="MockStore.recorder"></span>    recorder *<a href="#MockStoreMockRecorder">MockStoreMockRecorder</a>
 }
 </pre>
 
@@ -648,7 +649,7 @@
 			<p>MockStoreMockRecorder is the mock recorder for MockStore.
 
 			<pre>type MockStoreMockRecorder struct {
-    <span class="comment">// contains filtered or unexported fields</span>
+<span id="MockStoreMockRecorder.mock"></span>    mock *<a href="#MockStore">MockStore</a>
 }
 </pre>
 

@@ -96,12 +96,12 @@
 <span id="L39" class="ln">    39  </span>		log.Logger = log.Output(zerolog.ConsoleWriter{Out: os.Stderr})
 <span id="L40" class="ln">    40  </span>	}
 <span id="L41" class="ln">    41  </span>
-<span id="L42" class="ln">    42  </span>	connPool, err := pgxpool.New(context.Background(), config.DBAddress)
+<span id="L42" class="ln">    42  </span>	connPool, err := pgxpool.New(context.Background(), config.PostgresURI)
 <span id="L43" class="ln">    43  </span>	if err != nil {
 <span id="L44" class="ln">    44  </span>		log.Fatal().Err(err).Msg(&#34;cannot connect to db&#34;)
 <span id="L45" class="ln">    45  </span>	}
 <span id="L46" class="ln">    46  </span>
-<span id="L47" class="ln">    47  </span>	runDBMigration(&#34;file://internal/db/migrations/&#34;, config.DBAddress)
+<span id="L47" class="ln">    47  </span>	runDBMigration(&#34;file://internal/db/migrations/&#34;, config.PostgresURI)
 <span id="L48" class="ln">    48  </span>
 <span id="L49" class="ln">    49  </span>	store := db.NewStore(connPool)
 <span id="L50" class="ln">    50  </span>
@@ -119,8 +119,8 @@
 <span id="L62" class="ln">    62  </span>	}
 <span id="L63" class="ln">    63  </span>}
 <span id="L64" class="ln">    64  </span>
-<span id="L65" class="ln">    65  </span>func runDBMigration(migrationPath string, DBAddress string) {
-<span id="L66" class="ln">    66  </span>	migrations, err := migrate.New(migrationPath, DBAddress)
+<span id="L65" class="ln">    65  </span>func runDBMigration(migrationPath string, PostgresURI string) {
+<span id="L66" class="ln">    66  </span>	migrations, err := migrate.New(migrationPath, PostgresURI)
 <span id="L67" class="ln">    67  </span>	if err != nil {
 <span id="L68" class="ln">    68  </span>		log.Fatal().Err(err).Msg(&#34;cannot create new migrate instance&#34;)
 <span id="L69" class="ln">    69  </span>	}

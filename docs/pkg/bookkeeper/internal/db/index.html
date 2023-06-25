@@ -116,6 +116,9 @@
 				
 				<dd><a href="#ErrorCode">func ErrorCode(err error) string</a></dd>
 			
+				
+				<dd><a href="#addMoney">func addMoney(ctx context.Context, q *Queries, accountID1 int64, amount1 int64, accountID2 int64, amount2 int64) (account1 Account, account2 Account, err error)</a></dd>
+			
 			
 				
 				<dd><a href="#Account">type Account</a></dd>
@@ -281,6 +284,9 @@
 					
 					<dd>&nbsp; &nbsp; <a href="#SQLStore.VerifyEmailTx">func (store *SQLStore) VerifyEmailTx(ctx context.Context, arg VerifyEmailTxParams) (VerifyEmailTxResult, error)</a></dd>
 				
+					
+					<dd>&nbsp; &nbsp; <a href="#SQLStore.execTx">func (store *SQLStore) execTx(ctx context.Context, fn func(*Queries) error) error</a></dd>
+				
 			
 				
 				<dd><a href="#Session">type Session</a></dd>
@@ -403,6 +409,194 @@
     <span id="UniqueViolation">UniqueViolation</span>     = &#34;23505&#34;
 )</pre>
 			
+				
+				<pre>const <span id="addAccountBalance">addAccountBalance</span> = `-- name: AddAccountBalance :one
+UPDATE accounts
+SET balance = balance + $1
+WHERE id = $2
+RETURNING id, owner, balance, currency, created_at
+`</pre>
+			
+				
+				<pre>const <span id="createAccount">createAccount</span> = `-- name: CreateAccount :one
+INSERT INTO accounts (
+  owner,
+  balance,
+  currency
+) VALUES (
+  $1, $2, $3
+) RETURNING id, owner, balance, currency, created_at
+`</pre>
+			
+				
+				<pre>const <span id="createEntry">createEntry</span> = `-- name: CreateEntry :one
+INSERT INTO entries (
+  account_id,
+  amount
+) VALUES (
+  $1, $2
+) RETURNING id, account_id, amount, created_at
+`</pre>
+			
+				
+				<pre>const <span id="createSession">createSession</span> = `-- name: CreateSession :one
+INSERT INTO sessions (
+  id,
+  username,
+  refresh_token,
+  user_agent,
+  client_ip,
+  is_blocked,
+  expires_at
+) VALUES (
+  $1, $2, $3, $4, $5, $6, $7
+) RETURNING id, username, refresh_token, user_agent, client_ip, is_blocked, expires_at, created_at
+`</pre>
+			
+				
+				<pre>const <span id="createTransfer">createTransfer</span> = `-- name: CreateTransfer :one
+INSERT INTO transfers (
+  from_account_id,
+  to_account_id,
+  amount
+) VALUES (
+  $1, $2, $3
+) RETURNING id, from_account_id, to_account_id, amount, created_at
+`</pre>
+			
+				
+				<pre>const <span id="createUser">createUser</span> = `-- name: CreateUser :one
+INSERT INTO users (
+        username,
+        hashed_password,
+        full_name,
+        email
+    )
+VALUES ($1, $2, $3, $4)
+RETURNING username, hashed_password, full_name, email, password_changed_at, created_at, is_email_verified
+`</pre>
+			
+				
+				<pre>const <span id="createVerifyEmail">createVerifyEmail</span> = `-- name: CreateVerifyEmail :one
+INSERT INTO verify_emails (
+    username,
+    email,
+    secret_code
+) VALUES (
+    $1, $2, $3
+) RETURNING id, username, email, secret_code, is_used, created_at, expired_at
+`</pre>
+			
+				
+				<pre>const <span id="deleteAccount">deleteAccount</span> = `-- name: DeleteAccount :exec
+DELETE FROM accounts
+WHERE id = $1
+`</pre>
+			
+				
+				<pre>const <span id="getAccount">getAccount</span> = `-- name: GetAccount :one
+SELECT id, owner, balance, currency, created_at FROM accounts
+WHERE id = $1 LIMIT 1
+`</pre>
+			
+				
+				<pre>const <span id="getAccountForUpdate">getAccountForUpdate</span> = `-- name: GetAccountForUpdate :one
+SELECT id, owner, balance, currency, created_at FROM accounts
+WHERE id = $1 LIMIT 1
+FOR NO KEY UPDATE
+`</pre>
+			
+				
+				<pre>const <span id="getEntry">getEntry</span> = `-- name: GetEntry :one
+SELECT id, account_id, amount, created_at FROM entries
+WHERE id = $1 LIMIT 1
+`</pre>
+			
+				
+				<pre>const <span id="getSession">getSession</span> = `-- name: GetSession :one
+SELECT id, username, refresh_token, user_agent, client_ip, is_blocked, expires_at, created_at FROM sessions
+WHERE id = $1 LIMIT 1
+`</pre>
+			
+				
+				<pre>const <span id="getTransfer">getTransfer</span> = `-- name: GetTransfer :one
+SELECT id, from_account_id, to_account_id, amount, created_at FROM transfers
+WHERE id = $1 LIMIT 1
+`</pre>
+			
+				
+				<pre>const <span id="getUser">getUser</span> = `-- name: GetUser :one
+SELECT username, hashed_password, full_name, email, password_changed_at, created_at, is_email_verified
+FROM users
+WHERE username = $1
+LIMIT 1
+`</pre>
+			
+				
+				<pre>const <span id="listAccounts">listAccounts</span> = `-- name: ListAccounts :many
+SELECT id, owner, balance, currency, created_at FROM accounts
+WHERE owner = $1
+ORDER BY id
+LIMIT $2
+OFFSET $3
+`</pre>
+			
+				
+				<pre>const <span id="listEntries">listEntries</span> = `-- name: ListEntries :many
+SELECT id, account_id, amount, created_at FROM entries
+WHERE account_id = $1
+ORDER BY id
+LIMIT $2
+OFFSET $3
+`</pre>
+			
+				
+				<pre>const <span id="listTransfers">listTransfers</span> = `-- name: ListTransfers :many
+SELECT id, from_account_id, to_account_id, amount, created_at FROM transfers
+WHERE 
+    from_account_id = $1 OR
+    to_account_id = $2
+ORDER BY id
+LIMIT $3
+OFFSET $4
+`</pre>
+			
+				
+				<pre>const <span id="updateAccount">updateAccount</span> = `-- name: UpdateAccount :one
+UPDATE accounts
+SET balance = $2
+WHERE id = $1
+RETURNING id, owner, balance, currency, created_at
+`</pre>
+			
+				
+				<pre>const <span id="updateUser">updateUser</span> = `-- name: UpdateUser :one
+UPDATE users
+SET hashed_password = COALESCE($1, hashed_password),
+    password_changed_at = COALESCE(
+        $2,
+        password_changed_at
+    ),
+    full_name = COALESCE($3, full_name),
+    email = COALESCE($4, email),
+    is_email_verified = COALESCE($5, is_email_verified)
+WHERE username = $6
+RETURNING username, hashed_password, full_name, email, password_changed_at, created_at, is_email_verified
+`</pre>
+			
+				
+				<pre>const <span id="updateVerifyEmail">updateVerifyEmail</span> = `-- name: UpdateVerifyEmail :one
+UPDATE verify_emails
+SET
+    is_used = TRUE
+WHERE
+    id = $1
+    AND secret_code = $2
+    AND is_used = FALSE
+    AND expired_at &gt; now()
+RETURNING id, username, email, secret_code, is_used, created_at, expired_at
+`</pre>
+			
 		
 		
 			<h2 id="pkg-variables">Variables</h2>
@@ -425,6 +619,26 @@
 				
 			</h2>
 			<pre>func ErrorCode(err <a href="https://pkg.go.dev/builtin/#error">error</a>) <a href="https://pkg.go.dev/builtin/#string">string</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="addMoney">func <a href="/src/bookkeeper/internal/db/tx_transfer.go.html#L62">addMoney</a>
+				<a class="permalink" href="#addMoney">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func addMoney(
+    ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>,
+    q *<a href="#Queries">Queries</a>,
+    accountID1 <a href="https://pkg.go.dev/builtin/#int64">int64</a>,
+    amount1 <a href="https://pkg.go.dev/builtin/#int64">int64</a>,
+    accountID2 <a href="https://pkg.go.dev/builtin/#int64">int64</a>,
+    amount2 <a href="https://pkg.go.dev/builtin/#int64">int64</a>,
+) (account1 <a href="#Account">Account</a>, account2 <a href="#Account">Account</a>, err <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
 			
 			
 			
@@ -874,6 +1088,9 @@
 			
 
 			
+				
+				<pre>var <span id="_">_</span> <a href="#Querier">Querier</a> = (*<a href="#Queries">Queries</a>)(<a href="https://pkg.go.dev/builtin/#nil">nil</a>)</pre>
+			
 
 			
 			
@@ -892,7 +1109,7 @@
 			</h2>
 			
 			<pre>type Queries struct {
-    <span class="comment">// contains filtered or unexported fields</span>
+<span id="Queries.db"></span>    db <a href="#DBTX">DBTX</a>
 }
 </pre>
 
@@ -1181,8 +1398,8 @@
 			<p>SQLStore provides all functions to execute SQL queries and transactions.
 
 			<pre>type SQLStore struct {
+<span id="SQLStore.connPool"></span>    connPool *<a href="https://pkg.go.dev/github.com/jackc/pgx/v5/pgxpool/">pgxpool</a>.<a href="https://pkg.go.dev/github.com/jackc/pgx/v5/pgxpool/#Pool">Pool</a>
     *<a href="#Queries">Queries</a>
-    <span class="comment">// contains filtered or unexported fields</span>
 }
 </pre>
 
@@ -1217,7 +1434,7 @@
 				</h3>
 				<pre>func (store *<a href="#SQLStore">SQLStore</a>) TransferTx(ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, arg <a href="#TransferTxParams">TransferTxParams</a>) (<a href="#TransferTxResult">TransferTxResult</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
 				<p>TransferTx performs a money transfer from one account to the other.
-It creates the transfer, add account entries, and update accounts&apos; balance within a database transaction
+It creates the transfer, add account entries, and update accounts&apos; balance within a database transaction.
 
 				
 				
@@ -1231,6 +1448,19 @@ It creates the transfer, add account entries, and update accounts&apos; balance 
 				</h3>
 				<pre>func (store *<a href="#SQLStore">SQLStore</a>) VerifyEmailTx(ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, arg <a href="#VerifyEmailTxParams">VerifyEmailTxParams</a>) (<a href="#VerifyEmailTxResult">VerifyEmailTxResult</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
 				
+				
+				
+				
+			
+				
+				<h3 id="SQLStore.execTx">func (*SQLStore) <a href="/src/bookkeeper/internal/db/exec_tx.go.html#L9">execTx</a>
+					<a class="permalink" href="#SQLStore.execTx">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (store *<a href="#SQLStore">SQLStore</a>) execTx(ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, fn func(*<a href="#Queries">Queries</a>) <a href="https://pkg.go.dev/builtin/#error">error</a>) <a href="https://pkg.go.dev/builtin/#error">error</a></pre>
+				<p>ExecTx executes a function within a database transaction.
+
 				
 				
 				
@@ -1617,6 +1847,17 @@ It creates the transfer, add account entries, and update accounts&apos; balance 
 			</tr>
 			
 
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="mock/?m=all">mock</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						Package mockdb is a generated GoMock package.
+					</td>
+				</tr>
 			
 		</table>
 	</div>

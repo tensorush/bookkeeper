@@ -105,6 +105,8 @@
 			<div id="manual-nav">
 			<dl>
 			
+				<dd><a href="#pkg-constants">Constants</a></dd>
+			
 			
 			
 				
@@ -112,6 +114,30 @@
 			
 				
 				<dd><a href="#HttpLogger">func HttpLogger(handler http.Handler) http.Handler</a></dd>
+			
+				
+				<dd><a href="#convertUser">func convertUser(user db.User) *protogen.User</a></dd>
+			
+				
+				<dd><a href="#fieldViolation">func fieldViolation(field string, err error) *errdetails.BadRequest_FieldViolation</a></dd>
+			
+				
+				<dd><a href="#invalidArgumentError">func invalidArgumentError(violations []*errdetails.BadRequest_FieldViolation) error</a></dd>
+			
+				
+				<dd><a href="#unauthenticatedError">func unauthenticatedError(err error) error</a></dd>
+			
+				
+				<dd><a href="#validateCreateUserRequest">func validateCreateUserRequest(req *protogen.CreateUserRequest) (violations []*errdetails.BadRequest_FieldViolation)</a></dd>
+			
+				
+				<dd><a href="#validateLoginUserRequest">func validateLoginUserRequest(req *protogen.LoginUserRequest) (violations []*errdetails.BadRequest_FieldViolation)</a></dd>
+			
+				
+				<dd><a href="#validateUpdateUserRequest">func validateUpdateUserRequest(req *protogen.UpdateUserRequest) (violations []*errdetails.BadRequest_FieldViolation)</a></dd>
+			
+				
+				<dd><a href="#validateVerifyEmailRequest">func validateVerifyEmailRequest(req *protogen.VerifyEmailRequest) (violations []*errdetails.BadRequest_FieldViolation)</a></dd>
 			
 			
 				
@@ -148,6 +174,12 @@
 				
 					
 					<dd>&nbsp; &nbsp; <a href="#Server.VerifyEmail">func (server *Server) VerifyEmail(ctx context.Context, req *protogen.VerifyEmailRequest) (*protogen.VerifyEmailResponse, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Server.authorizeUser">func (server *Server) authorizeUser(ctx context.Context) (*tokens.Payload, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Server.extractMetadata">func (server *Server) extractMetadata(ctx context.Context) *Metadata</a></dd>
 				
 			
 			
@@ -190,6 +222,22 @@
 		
 
 		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span id="authorizationHeader">authorizationHeader</span> = &#34;authorization&#34;
+    <span id="authorizationBearer">authorizationBearer</span> = &#34;bearer&#34;
+)</pre>
+			
+				
+				<pre>const (
+    <span id="grpcGatewayUserAgentHeader">grpcGatewayUserAgentHeader</span> = &#34;grpcgateway-user-agent&#34;
+    <span id="userAgentHeader">userAgentHeader</span>            = &#34;user-agent&#34;
+    <span id="xForwardedForHeader">xForwardedForHeader</span>        = &#34;x-forwarded-for&#34;
+)</pre>
+			
+		
 		
 		
 			
@@ -218,6 +266,110 @@
 				
 			</h2>
 			<pre>func HttpLogger(handler <a href="https://pkg.go.dev/net/http/">http</a>.<a href="https://pkg.go.dev/net/http/#Handler">Handler</a>) <a href="https://pkg.go.dev/net/http/">http</a>.<a href="https://pkg.go.dev/net/http/#Handler">Handler</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="convertUser">func <a href="/src/bookkeeper/internal/grpc_api/converter.go.html#L10">convertUser</a>
+				<a class="permalink" href="#convertUser">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func convertUser(user <a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#User">User</a>) *<a href="/pkg/bookkeeper/internal/protogen/">protogen</a>.<a href="/pkg/bookkeeper/internal/protogen/#User">User</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="fieldViolation">func <a href="/src/bookkeeper/internal/grpc_api/error.go.html#L9">fieldViolation</a>
+				<a class="permalink" href="#fieldViolation">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func fieldViolation(field <a href="https://pkg.go.dev/builtin/#string">string</a>, err <a href="https://pkg.go.dev/builtin/#error">error</a>) *<a href="https://pkg.go.dev/google.golang.org/genproto/googleapis/rpc/errdetails/">errdetails</a>.<a href="https://pkg.go.dev/google.golang.org/genproto/googleapis/rpc/errdetails/#BadRequest_FieldViolation">BadRequest_FieldViolation</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="invalidArgumentError">func <a href="/src/bookkeeper/internal/grpc_api/error.go.html#L16">invalidArgumentError</a>
+				<a class="permalink" href="#invalidArgumentError">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func invalidArgumentError(violations []*<a href="https://pkg.go.dev/google.golang.org/genproto/googleapis/rpc/errdetails/">errdetails</a>.<a href="https://pkg.go.dev/google.golang.org/genproto/googleapis/rpc/errdetails/#BadRequest_FieldViolation">BadRequest_FieldViolation</a>) <a href="https://pkg.go.dev/builtin/#error">error</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="unauthenticatedError">func <a href="/src/bookkeeper/internal/grpc_api/error.go.html#L28">unauthenticatedError</a>
+				<a class="permalink" href="#unauthenticatedError">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func unauthenticatedError(err <a href="https://pkg.go.dev/builtin/#error">error</a>) <a href="https://pkg.go.dev/builtin/#error">error</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="validateCreateUserRequest">func <a href="/src/bookkeeper/internal/grpc_api/rpc_create_user.go.html#L64">validateCreateUserRequest</a>
+				<a class="permalink" href="#validateCreateUserRequest">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func validateCreateUserRequest(req *<a href="/pkg/bookkeeper/internal/protogen/">protogen</a>.<a href="/pkg/bookkeeper/internal/protogen/#CreateUserRequest">CreateUserRequest</a>) (violations []*<a href="https://pkg.go.dev/google.golang.org/genproto/googleapis/rpc/errdetails/">errdetails</a>.<a href="https://pkg.go.dev/google.golang.org/genproto/googleapis/rpc/errdetails/#BadRequest_FieldViolation">BadRequest_FieldViolation</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="validateLoginUserRequest">func <a href="/src/bookkeeper/internal/grpc_api/rpc_login_user.go.html#L77">validateLoginUserRequest</a>
+				<a class="permalink" href="#validateLoginUserRequest">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func validateLoginUserRequest(req *<a href="/pkg/bookkeeper/internal/protogen/">protogen</a>.<a href="/pkg/bookkeeper/internal/protogen/#LoginUserRequest">LoginUserRequest</a>) (violations []*<a href="https://pkg.go.dev/google.golang.org/genproto/googleapis/rpc/errdetails/">errdetails</a>.<a href="https://pkg.go.dev/google.golang.org/genproto/googleapis/rpc/errdetails/#BadRequest_FieldViolation">BadRequest_FieldViolation</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="validateUpdateUserRequest">func <a href="/src/bookkeeper/internal/grpc_api/rpc_update_user.go.html#L76">validateUpdateUserRequest</a>
+				<a class="permalink" href="#validateUpdateUserRequest">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func validateUpdateUserRequest(req *<a href="/pkg/bookkeeper/internal/protogen/">protogen</a>.<a href="/pkg/bookkeeper/internal/protogen/#UpdateUserRequest">UpdateUserRequest</a>) (violations []*<a href="https://pkg.go.dev/google.golang.org/genproto/googleapis/rpc/errdetails/">errdetails</a>.<a href="https://pkg.go.dev/google.golang.org/genproto/googleapis/rpc/errdetails/#BadRequest_FieldViolation">BadRequest_FieldViolation</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="validateVerifyEmailRequest">func <a href="/src/bookkeeper/internal/grpc_api/rpc_verify_email.go.html#L35">validateVerifyEmailRequest</a>
+				<a class="permalink" href="#validateVerifyEmailRequest">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func validateVerifyEmailRequest(req *<a href="/pkg/bookkeeper/internal/protogen/">protogen</a>.<a href="/pkg/bookkeeper/internal/protogen/#VerifyEmailRequest">VerifyEmailRequest</a>) (violations []*<a href="https://pkg.go.dev/google.golang.org/genproto/googleapis/rpc/errdetails/">errdetails</a>.<a href="https://pkg.go.dev/google.golang.org/genproto/googleapis/rpc/errdetails/#BadRequest_FieldViolation">BadRequest_FieldViolation</a>)</pre>
 			
 			
 			
@@ -312,7 +464,10 @@
 
 			<pre>type Server struct {
     <a href="/pkg/bookkeeper/internal/protogen/">protogen</a>.<a href="/pkg/bookkeeper/internal/protogen/#UnimplementedBookkeeperServer">UnimplementedBookkeeperServer</a>
-    <span class="comment">// contains filtered or unexported fields</span>
+<span id="Server.config"></span>    config          <a href="/pkg/bookkeeper/configs/">configs</a>.<a href="/pkg/bookkeeper/configs/#Config">Config</a>
+<span id="Server.store"></span>    store           <a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#Store">Store</a>
+<span id="Server.tokenMaker"></span>    tokenMaker      <a href="/pkg/bookkeeper/internal/tokens/">tokens</a>.<a href="/pkg/bookkeeper/internal/tokens/#Maker">Maker</a>
+<span id="Server.taskDistributor"></span>    taskDistributor <a href="/pkg/bookkeeper/internal/worker/">worker</a>.<a href="/pkg/bookkeeper/internal/worker/#TaskDistributor">TaskDistributor</a>
 }
 </pre>
 
@@ -382,6 +537,30 @@
 					
 				</h3>
 				<pre>func (server *<a href="#Server">Server</a>) VerifyEmail(ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, req *<a href="/pkg/bookkeeper/internal/protogen/">protogen</a>.<a href="/pkg/bookkeeper/internal/protogen/#VerifyEmailRequest">VerifyEmailRequest</a>) (*<a href="/pkg/bookkeeper/internal/protogen/">protogen</a>.<a href="/pkg/bookkeeper/internal/protogen/#VerifyEmailResponse">VerifyEmailResponse</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Server.authorizeUser">func (*Server) <a href="/src/bookkeeper/internal/grpc_api/authorization.go.html#L17">authorizeUser</a>
+					<a class="permalink" href="#Server.authorizeUser">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (server *<a href="#Server">Server</a>) authorizeUser(ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>) (*<a href="/pkg/bookkeeper/internal/tokens/">tokens</a>.<a href="/pkg/bookkeeper/internal/tokens/#Payload">Payload</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Server.extractMetadata">func (*Server) <a href="/src/bookkeeper/internal/grpc_api/metadata.go.html#L21">extractMetadata</a>
+					<a class="permalink" href="#Server.extractMetadata">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (server *<a href="#Server">Server</a>) extractMetadata(ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>) *<a href="#Metadata">Metadata</a></pre>
 				
 				
 				

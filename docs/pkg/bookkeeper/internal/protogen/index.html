@@ -128,6 +128,78 @@
 				
 				<dd><a href="#RegisterBookkeeperServer">func RegisterBookkeeperServer(s grpc.ServiceRegistrar, srv BookkeeperServer)</a></dd>
 			
+				
+				<dd><a href="#_Bookkeeper_CreateUser_Handler">func _Bookkeeper_CreateUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error)</a></dd>
+			
+				
+				<dd><a href="#_Bookkeeper_LoginUser_Handler">func _Bookkeeper_LoginUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error)</a></dd>
+			
+				
+				<dd><a href="#_Bookkeeper_UpdateUser_Handler">func _Bookkeeper_UpdateUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error)</a></dd>
+			
+				
+				<dd><a href="#_Bookkeeper_VerifyEmail_Handler">func _Bookkeeper_VerifyEmail_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error)</a></dd>
+			
+				
+				<dd><a href="#file_rpc_create_user_proto_init">func file_rpc_create_user_proto_init()</a></dd>
+			
+				
+				<dd><a href="#file_rpc_create_user_proto_rawDescGZIP">func file_rpc_create_user_proto_rawDescGZIP() []byte</a></dd>
+			
+				
+				<dd><a href="#file_rpc_login_user_proto_init">func file_rpc_login_user_proto_init()</a></dd>
+			
+				
+				<dd><a href="#file_rpc_login_user_proto_rawDescGZIP">func file_rpc_login_user_proto_rawDescGZIP() []byte</a></dd>
+			
+				
+				<dd><a href="#file_rpc_update_user_proto_init">func file_rpc_update_user_proto_init()</a></dd>
+			
+				
+				<dd><a href="#file_rpc_update_user_proto_rawDescGZIP">func file_rpc_update_user_proto_rawDescGZIP() []byte</a></dd>
+			
+				
+				<dd><a href="#file_rpc_verify_email_proto_init">func file_rpc_verify_email_proto_init()</a></dd>
+			
+				
+				<dd><a href="#file_rpc_verify_email_proto_rawDescGZIP">func file_rpc_verify_email_proto_rawDescGZIP() []byte</a></dd>
+			
+				
+				<dd><a href="#file_service_bookkeeper_proto_init">func file_service_bookkeeper_proto_init()</a></dd>
+			
+				
+				<dd><a href="#file_user_proto_init">func file_user_proto_init()</a></dd>
+			
+				
+				<dd><a href="#file_user_proto_rawDescGZIP">func file_user_proto_rawDescGZIP() []byte</a></dd>
+			
+				
+				<dd><a href="#init">func init()</a></dd>
+			
+				
+				<dd><a href="#local_request_Bookkeeper_CreateUser_0">func local_request_Bookkeeper_CreateUser_0(ctx context.Context, marshaler runtime.Marshaler, server BookkeeperServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error)</a></dd>
+			
+				
+				<dd><a href="#local_request_Bookkeeper_LoginUser_0">func local_request_Bookkeeper_LoginUser_0(ctx context.Context, marshaler runtime.Marshaler, server BookkeeperServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error)</a></dd>
+			
+				
+				<dd><a href="#local_request_Bookkeeper_UpdateUser_0">func local_request_Bookkeeper_UpdateUser_0(ctx context.Context, marshaler runtime.Marshaler, server BookkeeperServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error)</a></dd>
+			
+				
+				<dd><a href="#local_request_Bookkeeper_VerifyEmail_0">func local_request_Bookkeeper_VerifyEmail_0(ctx context.Context, marshaler runtime.Marshaler, server BookkeeperServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error)</a></dd>
+			
+				
+				<dd><a href="#request_Bookkeeper_CreateUser_0">func request_Bookkeeper_CreateUser_0(ctx context.Context, marshaler runtime.Marshaler, client BookkeeperClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error)</a></dd>
+			
+				
+				<dd><a href="#request_Bookkeeper_LoginUser_0">func request_Bookkeeper_LoginUser_0(ctx context.Context, marshaler runtime.Marshaler, client BookkeeperClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error)</a></dd>
+			
+				
+				<dd><a href="#request_Bookkeeper_UpdateUser_0">func request_Bookkeeper_UpdateUser_0(ctx context.Context, marshaler runtime.Marshaler, client BookkeeperClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error)</a></dd>
+			
+				
+				<dd><a href="#request_Bookkeeper_VerifyEmail_0">func request_Bookkeeper_VerifyEmail_0(ctx context.Context, marshaler runtime.Marshaler, client BookkeeperClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error)</a></dd>
+			
 			
 				
 				<dd><a href="#BookkeeperClient">type BookkeeperClient</a></dd>
@@ -277,6 +349,9 @@
 					
 					<dd>&nbsp; &nbsp; <a href="#UnimplementedBookkeeperServer.VerifyEmail">func (UnimplementedBookkeeperServer) VerifyEmail(context.Context, *VerifyEmailRequest) (*VerifyEmailResponse, error)</a></dd>
 				
+					
+					<dd>&nbsp; &nbsp; <a href="#UnimplementedBookkeeperServer.mustEmbedUnimplementedBookkeeperServer">func (UnimplementedBookkeeperServer) mustEmbedUnimplementedBookkeeperServer()</a></dd>
+				
 			
 				
 				<dd><a href="#UnsafeBookkeeperServer">type UnsafeBookkeeperServer</a></dd>
@@ -422,6 +497,23 @@
 					<dd>&nbsp; &nbsp; <a href="#VerifyEmailResponse.String">func (x *VerifyEmailResponse) String() string</a></dd>
 				
 			
+				
+				<dd><a href="#bookkeeperClient">type bookkeeperClient</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#bookkeeperClient.CreateUser">func (c *bookkeeperClient) CreateUser(ctx context.Context, in *CreateUserRequest, opts ...grpc.CallOption) (*CreateUserResponse, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#bookkeeperClient.LoginUser">func (c *bookkeeperClient) LoginUser(ctx context.Context, in *LoginUserRequest, opts ...grpc.CallOption) (*LoginUserResponse, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#bookkeeperClient.UpdateUser">func (c *bookkeeperClient) UpdateUser(ctx context.Context, in *UpdateUserRequest, opts ...grpc.CallOption) (*UpdateUserResponse, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#bookkeeperClient.VerifyEmail">func (c *bookkeeperClient) VerifyEmail(ctx context.Context, in *VerifyEmailRequest, opts ...grpc.CallOption) (*VerifyEmailResponse, error)</a></dd>
+				
+			
 			
 			</dl>
 			</div><!-- #manual-nav -->
@@ -462,15 +554,121 @@
 			
 				
 				<pre>const (
+    <span class="comment">// Verify that this generated code is sufficiently up-to-date.</span>
+    <span id="_">_</span> = <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#EnforceVersion">EnforceVersion</a>(20 - <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#MinVersion">MinVersion</a>)
+    <span class="comment">// Verify that runtime/protoimpl is sufficiently up-to-date.</span>
+    <span id="_">_</span> = <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#EnforceVersion">EnforceVersion</a>(<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#MaxVersion">MaxVersion</a> - 20)
+)</pre>
+			
+				
+				<pre>const (
+    <span class="comment">// Verify that this generated code is sufficiently up-to-date.</span>
+    <span id="_">_</span> = <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#EnforceVersion">EnforceVersion</a>(20 - <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#MinVersion">MinVersion</a>)
+    <span class="comment">// Verify that runtime/protoimpl is sufficiently up-to-date.</span>
+    <span id="_">_</span> = <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#EnforceVersion">EnforceVersion</a>(<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#MaxVersion">MaxVersion</a> - 20)
+)</pre>
+			
+				
+				<pre>const (
+    <span class="comment">// Verify that this generated code is sufficiently up-to-date.</span>
+    <span id="_">_</span> = <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#EnforceVersion">EnforceVersion</a>(20 - <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#MinVersion">MinVersion</a>)
+    <span class="comment">// Verify that runtime/protoimpl is sufficiently up-to-date.</span>
+    <span id="_">_</span> = <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#EnforceVersion">EnforceVersion</a>(<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#MaxVersion">MaxVersion</a> - 20)
+)</pre>
+			
+				
+				<pre>const (
+    <span class="comment">// Verify that this generated code is sufficiently up-to-date.</span>
+    <span id="_">_</span> = <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#EnforceVersion">EnforceVersion</a>(20 - <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#MinVersion">MinVersion</a>)
+    <span class="comment">// Verify that runtime/protoimpl is sufficiently up-to-date.</span>
+    <span id="_">_</span> = <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#EnforceVersion">EnforceVersion</a>(<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#MaxVersion">MaxVersion</a> - 20)
+)</pre>
+			
+				
+				<pre>const (
+    <span class="comment">// Verify that this generated code is sufficiently up-to-date.</span>
+    <span id="_">_</span> = <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#EnforceVersion">EnforceVersion</a>(20 - <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#MinVersion">MinVersion</a>)
+    <span class="comment">// Verify that runtime/protoimpl is sufficiently up-to-date.</span>
+    <span id="_">_</span> = <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#EnforceVersion">EnforceVersion</a>(<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#MaxVersion">MaxVersion</a> - 20)
+)</pre>
+			
+				
+				<pre>const (
     <span id="Bookkeeper_CreateUser_FullMethodName">Bookkeeper_CreateUser_FullMethodName</span>  = &#34;/protogen.bookkeeper/CreateUser&#34;
     <span id="Bookkeeper_UpdateUser_FullMethodName">Bookkeeper_UpdateUser_FullMethodName</span>  = &#34;/protogen.bookkeeper/UpdateUser&#34;
     <span id="Bookkeeper_LoginUser_FullMethodName">Bookkeeper_LoginUser_FullMethodName</span>   = &#34;/protogen.bookkeeper/LoginUser&#34;
     <span id="Bookkeeper_VerifyEmail_FullMethodName">Bookkeeper_VerifyEmail_FullMethodName</span> = &#34;/protogen.bookkeeper/VerifyEmail&#34;
 )</pre>
 			
+				
+				<pre>const (
+    <span class="comment">// Verify that this generated code is sufficiently up-to-date.</span>
+    <span id="_">_</span> = <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#EnforceVersion">EnforceVersion</a>(20 - <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#MinVersion">MinVersion</a>)
+    <span class="comment">// Verify that runtime/protoimpl is sufficiently up-to-date.</span>
+    <span id="_">_</span> = <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#EnforceVersion">EnforceVersion</a>(<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#MaxVersion">MaxVersion</a> - 20)
+)</pre>
+			
+				<p>This is a compile-time assertion to ensure that this generated file
+is compatible with the grpc package it is being compiled against.
+Requires gRPC-Go v1.32.0 or later.
+
+				<pre>const <span id="_">_</span> = <a href="https://pkg.go.dev/google.golang.org/grpc/">grpc</a>.<a href="https://pkg.go.dev/google.golang.org/grpc/#SupportPackageIsVersion7">SupportPackageIsVersion7</a></pre>
+			
 		
 		
 			<h2 id="pkg-variables">Variables</h2>
+			
+				
+				<pre>var (
+    <span id="file_rpc_create_user_proto_rawDescOnce">file_rpc_create_user_proto_rawDescOnce</span> <a href="https://pkg.go.dev/sync/">sync</a>.<a href="https://pkg.go.dev/sync/#Once">Once</a>
+    <span id="file_rpc_create_user_proto_rawDescData">file_rpc_create_user_proto_rawDescData</span> = file_rpc_create_user_proto_rawDesc
+)</pre>
+			
+				
+				<pre>var (
+    <span id="file_rpc_login_user_proto_rawDescOnce">file_rpc_login_user_proto_rawDescOnce</span> <a href="https://pkg.go.dev/sync/">sync</a>.<a href="https://pkg.go.dev/sync/#Once">Once</a>
+    <span id="file_rpc_login_user_proto_rawDescData">file_rpc_login_user_proto_rawDescData</span> = file_rpc_login_user_proto_rawDesc
+)</pre>
+			
+				
+				<pre>var (
+    <span id="file_rpc_update_user_proto_rawDescOnce">file_rpc_update_user_proto_rawDescOnce</span> <a href="https://pkg.go.dev/sync/">sync</a>.<a href="https://pkg.go.dev/sync/#Once">Once</a>
+    <span id="file_rpc_update_user_proto_rawDescData">file_rpc_update_user_proto_rawDescData</span> = file_rpc_update_user_proto_rawDesc
+)</pre>
+			
+				
+				<pre>var (
+    <span id="file_rpc_verify_email_proto_rawDescOnce">file_rpc_verify_email_proto_rawDescOnce</span> <a href="https://pkg.go.dev/sync/">sync</a>.<a href="https://pkg.go.dev/sync/#Once">Once</a>
+    <span id="file_rpc_verify_email_proto_rawDescData">file_rpc_verify_email_proto_rawDescData</span> = file_rpc_verify_email_proto_rawDesc
+)</pre>
+			
+				
+				<pre>var (
+    <span id="pattern_Bookkeeper_CreateUser_0">pattern_Bookkeeper_CreateUser_0</span> = <a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#MustPattern">MustPattern</a>(<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#NewPattern">NewPattern</a>(1, []<a href="https://pkg.go.dev/builtin/#int">int</a>{2, 0, 2, 1}, []<a href="https://pkg.go.dev/builtin/#string">string</a>{&#34;v1&#34;, &#34;create_user&#34;}, &#34;&#34;))
+
+    <span id="pattern_Bookkeeper_UpdateUser_0">pattern_Bookkeeper_UpdateUser_0</span> = <a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#MustPattern">MustPattern</a>(<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#NewPattern">NewPattern</a>(1, []<a href="https://pkg.go.dev/builtin/#int">int</a>{2, 0, 2, 1}, []<a href="https://pkg.go.dev/builtin/#string">string</a>{&#34;v1&#34;, &#34;update_user&#34;}, &#34;&#34;))
+
+    <span id="pattern_Bookkeeper_LoginUser_0">pattern_Bookkeeper_LoginUser_0</span> = <a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#MustPattern">MustPattern</a>(<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#NewPattern">NewPattern</a>(1, []<a href="https://pkg.go.dev/builtin/#int">int</a>{2, 0, 2, 1}, []<a href="https://pkg.go.dev/builtin/#string">string</a>{&#34;v1&#34;, &#34;login_user&#34;}, &#34;&#34;))
+
+    <span id="pattern_Bookkeeper_VerifyEmail_0">pattern_Bookkeeper_VerifyEmail_0</span> = <a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#MustPattern">MustPattern</a>(<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#NewPattern">NewPattern</a>(1, []<a href="https://pkg.go.dev/builtin/#int">int</a>{2, 0, 2, 1}, []<a href="https://pkg.go.dev/builtin/#string">string</a>{&#34;v1&#34;, &#34;verify_email&#34;}, &#34;&#34;))
+)</pre>
+			
+				
+				<pre>var (
+    <span id="forward_Bookkeeper_CreateUser_0">forward_Bookkeeper_CreateUser_0</span> = <a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#ForwardResponseMessage">ForwardResponseMessage</a>
+
+    <span id="forward_Bookkeeper_UpdateUser_0">forward_Bookkeeper_UpdateUser_0</span> = <a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#ForwardResponseMessage">ForwardResponseMessage</a>
+
+    <span id="forward_Bookkeeper_LoginUser_0">forward_Bookkeeper_LoginUser_0</span> = <a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#ForwardResponseMessage">ForwardResponseMessage</a>
+
+    <span id="forward_Bookkeeper_VerifyEmail_0">forward_Bookkeeper_VerifyEmail_0</span> = <a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#ForwardResponseMessage">ForwardResponseMessage</a>
+)</pre>
+			
+				
+				<pre>var (
+    <span id="file_user_proto_rawDescOnce">file_user_proto_rawDescOnce</span> <a href="https://pkg.go.dev/sync/">sync</a>.<a href="https://pkg.go.dev/sync/#Once">Once</a>
+    <span id="file_user_proto_rawDescData">file_user_proto_rawDescData</span> = file_user_proto_rawDesc
+)</pre>
 			
 				<p>Bookkeeper_ServiceDesc is the grpc.ServiceDesc for Bookkeeper service.
 It&apos;s only intended for direct use with grpc.RegisterService,
@@ -518,6 +716,352 @@ and not to be introspected or modified (even as a copy)
 			
 				
 				<pre>var <span id="File_user_proto">File_user_proto</span> <a href="https://pkg.go.dev/google.golang.org/protobuf/reflect/protoreflect/">protoreflect</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/reflect/protoreflect/#FileDescriptor">FileDescriptor</a></pre>
+			
+				<p>Suppress &quot;imported and not used&quot; errors
+
+				<pre>var <span id="_">_</span> <a href="https://pkg.go.dev/google.golang.org/grpc/codes/">codes</a>.<a href="https://pkg.go.dev/google.golang.org/grpc/codes/#Code">Code</a></pre>
+			
+				
+				<pre>var <span id="_">_</span> <a href="https://pkg.go.dev/io/">io</a>.<a href="https://pkg.go.dev/io/#Reader">Reader</a></pre>
+			
+				
+				<pre>var <span id="_">_</span> <a href="https://pkg.go.dev/google.golang.org/grpc/status/">status</a>.<a href="https://pkg.go.dev/google.golang.org/grpc/status/#Status">Status</a></pre>
+			
+				
+				<pre>var <span id="_">_</span> = <a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#String">String</a></pre>
+			
+				
+				<pre>var <span id="_">_</span> = <a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/utilities/">utilities</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/utilities/#NewDoubleArray">NewDoubleArray</a></pre>
+			
+				
+				<pre>var <span id="_">_</span> = <a href="https://pkg.go.dev/google.golang.org/grpc/metadata/">metadata</a>.<a href="https://pkg.go.dev/google.golang.org/grpc/metadata/#Join">Join</a></pre>
+			
+				
+				<pre>var <span id="file_rpc_create_user_proto_depIdxs">file_rpc_create_user_proto_depIdxs</span> = []<a href="https://pkg.go.dev/builtin/#int32">int32</a>{
+    2,
+    1,
+    1,
+    1,
+    1,
+    0,
+}</pre>
+			
+				
+				<pre>var <span id="file_rpc_create_user_proto_goTypes">file_rpc_create_user_proto_goTypes</span> = []interface{}{
+    (*<a href="#CreateUserRequest">CreateUserRequest</a>)(<a href="https://pkg.go.dev/builtin/#nil">nil</a>),
+    (*<a href="#CreateUserResponse">CreateUserResponse</a>)(<a href="https://pkg.go.dev/builtin/#nil">nil</a>),
+    (*<a href="#User">User</a>)(<a href="https://pkg.go.dev/builtin/#nil">nil</a>),
+}</pre>
+			
+				
+				<pre>var <span id="file_rpc_create_user_proto_msgTypes">file_rpc_create_user_proto_msgTypes</span> = <a href="https://pkg.go.dev/builtin/#make">make</a>([]<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#MessageInfo">MessageInfo</a>, 2)</pre>
+			
+				
+				<pre>var <span id="file_rpc_create_user_proto_rawDesc">file_rpc_create_user_proto_rawDesc</span> = []<a href="https://pkg.go.dev/builtin/#byte">byte</a>{
+    0x0a, 0x15, 0x72, 0x70, 0x63, 0x5f, 0x63, 0x72, 0x65, 0x61, 0x74, 0x65, 0x5f, 0x75, 0x73, 0x65,
+    0x72, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x08, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x67, 0x65,
+    0x6e, 0x1a, 0x0a, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0x7e, 0x0a,
+    0x11, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x55, 0x73, 0x65, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65,
+    0x73, 0x74, 0x12, 0x1a, 0x0a, 0x08, 0x75, 0x73, 0x65, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01,
+    0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x75, 0x73, 0x65, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x12, 0x1b,
+    0x0a, 0x09, 0x66, 0x75, 0x6c, 0x6c, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28,
+    0x09, 0x52, 0x08, 0x66, 0x75, 0x6c, 0x6c, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x14, 0x0a, 0x05, 0x65,
+    0x6d, 0x61, 0x69, 0x6c, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x65, 0x6d, 0x61, 0x69,
+    0x6c, 0x12, 0x1a, 0x0a, 0x08, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x18, 0x04, 0x20,
+    0x01, 0x28, 0x09, 0x52, 0x08, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x22, 0x38, 0x0a,
+    0x12, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x55, 0x73, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f,
+    0x6e, 0x73, 0x65, 0x12, 0x22, 0x0a, 0x04, 0x75, 0x73, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28,
+    0x0b, 0x32, 0x0e, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x67, 0x65, 0x6e, 0x2e, 0x55, 0x73, 0x65,
+    0x72, 0x52, 0x04, 0x75, 0x73, 0x65, 0x72, 0x42, 0x1e, 0x5a, 0x1c, 0x62, 0x6f, 0x6f, 0x6b, 0x6b,
+    0x65, 0x65, 0x70, 0x65, 0x72, 0x2f, 0x69, 0x6e, 0x74, 0x65, 0x72, 0x6e, 0x61, 0x6c, 0x2f, 0x70,
+    0x72, 0x6f, 0x74, 0x6f, 0x67, 0x65, 0x6e, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+}</pre>
+			
+				
+				<pre>var <span id="file_rpc_login_user_proto_depIdxs">file_rpc_login_user_proto_depIdxs</span> = []<a href="https://pkg.go.dev/builtin/#int32">int32</a>{
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    0,
+}</pre>
+			
+				
+				<pre>var <span id="file_rpc_login_user_proto_goTypes">file_rpc_login_user_proto_goTypes</span> = []interface{}{
+    (*<a href="#LoginUserRequest">LoginUserRequest</a>)(<a href="https://pkg.go.dev/builtin/#nil">nil</a>),
+    (*<a href="#LoginUserResponse">LoginUserResponse</a>)(<a href="https://pkg.go.dev/builtin/#nil">nil</a>),
+    (*<a href="#User">User</a>)(<a href="https://pkg.go.dev/builtin/#nil">nil</a>),
+    (*<a href="https://pkg.go.dev/google.golang.org/protobuf/types/known/timestamppb/">timestamppb</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/types/known/timestamppb/#Timestamp">Timestamp</a>)(<a href="https://pkg.go.dev/builtin/#nil">nil</a>),
+}</pre>
+			
+				
+				<pre>var <span id="file_rpc_login_user_proto_msgTypes">file_rpc_login_user_proto_msgTypes</span> = <a href="https://pkg.go.dev/builtin/#make">make</a>([]<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#MessageInfo">MessageInfo</a>, 2)</pre>
+			
+				
+				<pre>var <span id="file_rpc_login_user_proto_rawDesc">file_rpc_login_user_proto_rawDesc</span> = []<a href="https://pkg.go.dev/builtin/#byte">byte</a>{
+    0x0a, 0x14, 0x72, 0x70, 0x63, 0x5f, 0x6c, 0x6f, 0x67, 0x69, 0x6e, 0x5f, 0x75, 0x73, 0x65, 0x72,
+    0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x08, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x67, 0x65, 0x6e,
+    0x1a, 0x0a, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x1f, 0x67, 0x6f,
+    0x6f, 0x67, 0x6c, 0x65, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2f, 0x74, 0x69,
+    0x6d, 0x65, 0x73, 0x74, 0x61, 0x6d, 0x70, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0x4a, 0x0a,
+    0x10, 0x4c, 0x6f, 0x67, 0x69, 0x6e, 0x55, 0x73, 0x65, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
+    0x74, 0x12, 0x1a, 0x0a, 0x08, 0x75, 0x73, 0x65, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20,
+    0x01, 0x28, 0x09, 0x52, 0x08, 0x75, 0x73, 0x65, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x12, 0x1a, 0x0a,
+    0x08, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52,
+    0x08, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x22, 0xc6, 0x02, 0x0a, 0x11, 0x4c, 0x6f,
+    0x67, 0x69, 0x6e, 0x55, 0x73, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12,
+    0x22, 0x0a, 0x04, 0x75, 0x73, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0e, 0x2e,
+    0x70, 0x72, 0x6f, 0x74, 0x6f, 0x67, 0x65, 0x6e, 0x2e, 0x55, 0x73, 0x65, 0x72, 0x52, 0x04, 0x75,
+    0x73, 0x65, 0x72, 0x12, 0x1d, 0x0a, 0x0a, 0x73, 0x65, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x5f, 0x69,
+    0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x73, 0x65, 0x73, 0x73, 0x69, 0x6f, 0x6e,
+    0x49, 0x64, 0x12, 0x21, 0x0a, 0x0c, 0x61, 0x63, 0x63, 0x65, 0x73, 0x73, 0x5f, 0x74, 0x6f, 0x6b,
+    0x65, 0x6e, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x61, 0x63, 0x63, 0x65, 0x73, 0x73,
+    0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x23, 0x0a, 0x0d, 0x72, 0x65, 0x66, 0x72, 0x65, 0x73, 0x68,
+    0x5f, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0c, 0x72, 0x65,
+    0x66, 0x72, 0x65, 0x73, 0x68, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x51, 0x0a, 0x17, 0x61, 0x63,
+    0x63, 0x65, 0x73, 0x73, 0x5f, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x5f, 0x65, 0x78, 0x70, 0x69, 0x72,
+    0x65, 0x73, 0x5f, 0x61, 0x74, 0x18, 0x05, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1a, 0x2e, 0x67, 0x6f,
+    0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x54, 0x69,
+    0x6d, 0x65, 0x73, 0x74, 0x61, 0x6d, 0x70, 0x52, 0x14, 0x61, 0x63, 0x63, 0x65, 0x73, 0x73, 0x54,
+    0x6f, 0x6b, 0x65, 0x6e, 0x45, 0x78, 0x70, 0x69, 0x72, 0x65, 0x73, 0x41, 0x74, 0x12, 0x53, 0x0a,
+    0x18, 0x72, 0x65, 0x66, 0x72, 0x65, 0x73, 0x68, 0x5f, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x5f, 0x65,
+    0x78, 0x70, 0x69, 0x72, 0x65, 0x73, 0x5f, 0x61, 0x74, 0x18, 0x06, 0x20, 0x01, 0x28, 0x0b, 0x32,
+    0x1a, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75,
+    0x66, 0x2e, 0x54, 0x69, 0x6d, 0x65, 0x73, 0x74, 0x61, 0x6d, 0x70, 0x52, 0x15, 0x72, 0x65, 0x66,
+    0x72, 0x65, 0x73, 0x68, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x45, 0x78, 0x70, 0x69, 0x72, 0x65, 0x73,
+    0x41, 0x74, 0x42, 0x1e, 0x5a, 0x1c, 0x62, 0x6f, 0x6f, 0x6b, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72,
+    0x2f, 0x69, 0x6e, 0x74, 0x65, 0x72, 0x6e, 0x61, 0x6c, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x67,
+    0x65, 0x6e, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+}</pre>
+			
+				
+				<pre>var <span id="file_rpc_update_user_proto_depIdxs">file_rpc_update_user_proto_depIdxs</span> = []<a href="https://pkg.go.dev/builtin/#int32">int32</a>{
+    2,
+    1,
+    1,
+    1,
+    1,
+    0,
+}</pre>
+			
+				
+				<pre>var <span id="file_rpc_update_user_proto_goTypes">file_rpc_update_user_proto_goTypes</span> = []interface{}{
+    (*<a href="#UpdateUserRequest">UpdateUserRequest</a>)(<a href="https://pkg.go.dev/builtin/#nil">nil</a>),
+    (*<a href="#UpdateUserResponse">UpdateUserResponse</a>)(<a href="https://pkg.go.dev/builtin/#nil">nil</a>),
+    (*<a href="#User">User</a>)(<a href="https://pkg.go.dev/builtin/#nil">nil</a>),
+}</pre>
+			
+				
+				<pre>var <span id="file_rpc_update_user_proto_msgTypes">file_rpc_update_user_proto_msgTypes</span> = <a href="https://pkg.go.dev/builtin/#make">make</a>([]<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#MessageInfo">MessageInfo</a>, 2)</pre>
+			
+				
+				<pre>var <span id="file_rpc_update_user_proto_rawDesc">file_rpc_update_user_proto_rawDesc</span> = []<a href="https://pkg.go.dev/builtin/#byte">byte</a>{
+    0x0a, 0x15, 0x72, 0x70, 0x63, 0x5f, 0x75, 0x70, 0x64, 0x61, 0x74, 0x65, 0x5f, 0x75, 0x73, 0x65,
+    0x72, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x08, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x67, 0x65,
+    0x6e, 0x1a, 0x0a, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0xb2, 0x01,
+    0x0a, 0x11, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x55, 0x73, 0x65, 0x72, 0x52, 0x65, 0x71, 0x75,
+    0x65, 0x73, 0x74, 0x12, 0x1a, 0x0a, 0x08, 0x75, 0x73, 0x65, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x18,
+    0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x75, 0x73, 0x65, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x12,
+    0x20, 0x0a, 0x09, 0x66, 0x75, 0x6c, 0x6c, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01,
+    0x28, 0x09, 0x48, 0x00, 0x52, 0x08, 0x66, 0x75, 0x6c, 0x6c, 0x4e, 0x61, 0x6d, 0x65, 0x88, 0x01,
+    0x01, 0x12, 0x19, 0x0a, 0x05, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09,
+    0x48, 0x01, 0x52, 0x05, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x88, 0x01, 0x01, 0x12, 0x1f, 0x0a, 0x08,
+    0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x48, 0x02,
+    0x52, 0x08, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x88, 0x01, 0x01, 0x42, 0x0c, 0x0a,
+    0x0a, 0x5f, 0x66, 0x75, 0x6c, 0x6c, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x42, 0x08, 0x0a, 0x06, 0x5f,
+    0x65, 0x6d, 0x61, 0x69, 0x6c, 0x42, 0x0b, 0x0a, 0x09, 0x5f, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f,
+    0x72, 0x64, 0x22, 0x38, 0x0a, 0x12, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x55, 0x73, 0x65, 0x72,
+    0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x22, 0x0a, 0x04, 0x75, 0x73, 0x65, 0x72,
+    0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0e, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x67, 0x65,
+    0x6e, 0x2e, 0x55, 0x73, 0x65, 0x72, 0x52, 0x04, 0x75, 0x73, 0x65, 0x72, 0x42, 0x1e, 0x5a, 0x1c,
+    0x62, 0x6f, 0x6f, 0x6b, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72, 0x2f, 0x69, 0x6e, 0x74, 0x65, 0x72,
+    0x6e, 0x61, 0x6c, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x67, 0x65, 0x6e, 0x62, 0x06, 0x70, 0x72,
+    0x6f, 0x74, 0x6f, 0x33,
+}</pre>
+			
+				
+				<pre>var <span id="file_rpc_verify_email_proto_depIdxs">file_rpc_verify_email_proto_depIdxs</span> = []<a href="https://pkg.go.dev/builtin/#int32">int32</a>{
+    0,
+    0,
+    0,
+    0,
+    0,
+}</pre>
+			
+				
+				<pre>var <span id="file_rpc_verify_email_proto_goTypes">file_rpc_verify_email_proto_goTypes</span> = []interface{}{
+    (*<a href="#VerifyEmailRequest">VerifyEmailRequest</a>)(<a href="https://pkg.go.dev/builtin/#nil">nil</a>),
+    (*<a href="#VerifyEmailResponse">VerifyEmailResponse</a>)(<a href="https://pkg.go.dev/builtin/#nil">nil</a>),
+}</pre>
+			
+				
+				<pre>var <span id="file_rpc_verify_email_proto_msgTypes">file_rpc_verify_email_proto_msgTypes</span> = <a href="https://pkg.go.dev/builtin/#make">make</a>([]<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#MessageInfo">MessageInfo</a>, 2)</pre>
+			
+				
+				<pre>var <span id="file_rpc_verify_email_proto_rawDesc">file_rpc_verify_email_proto_rawDesc</span> = []<a href="https://pkg.go.dev/builtin/#byte">byte</a>{
+    0x0a, 0x16, 0x72, 0x70, 0x63, 0x5f, 0x76, 0x65, 0x72, 0x69, 0x66, 0x79, 0x5f, 0x65, 0x6d, 0x61,
+    0x69, 0x6c, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x08, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x67,
+    0x65, 0x6e, 0x22, 0x50, 0x0a, 0x12, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x45, 0x6d, 0x61, 0x69,
+    0x6c, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x19, 0x0a, 0x08, 0x65, 0x6d, 0x61, 0x69,
+    0x6c, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x07, 0x65, 0x6d, 0x61, 0x69,
+    0x6c, 0x49, 0x64, 0x12, 0x1f, 0x0a, 0x0b, 0x73, 0x65, 0x63, 0x72, 0x65, 0x74, 0x5f, 0x63, 0x6f,
+    0x64, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0a, 0x73, 0x65, 0x63, 0x72, 0x65, 0x74,
+    0x43, 0x6f, 0x64, 0x65, 0x22, 0x36, 0x0a, 0x13, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x45, 0x6d,
+    0x61, 0x69, 0x6c, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x1f, 0x0a, 0x0b, 0x69,
+    0x73, 0x5f, 0x76, 0x65, 0x72, 0x69, 0x66, 0x69, 0x65, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x08,
+    0x52, 0x0a, 0x69, 0x73, 0x56, 0x65, 0x72, 0x69, 0x66, 0x69, 0x65, 0x64, 0x42, 0x1e, 0x5a, 0x1c,
+    0x62, 0x6f, 0x6f, 0x6b, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72, 0x2f, 0x69, 0x6e, 0x74, 0x65, 0x72,
+    0x6e, 0x61, 0x6c, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x67, 0x65, 0x6e, 0x62, 0x06, 0x70, 0x72,
+    0x6f, 0x74, 0x6f, 0x33,
+}</pre>
+			
+				
+				<pre>var <span id="file_service_bookkeeper_proto_depIdxs">file_service_bookkeeper_proto_depIdxs</span> = []<a href="https://pkg.go.dev/builtin/#int32">int32</a>{
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    4,
+    0,
+    0,
+    0,
+    0,
+}</pre>
+			
+				
+				<pre>var <span id="file_service_bookkeeper_proto_goTypes">file_service_bookkeeper_proto_goTypes</span> = []interface{}{
+    (*<a href="#CreateUserRequest">CreateUserRequest</a>)(<a href="https://pkg.go.dev/builtin/#nil">nil</a>),
+    (*<a href="#UpdateUserRequest">UpdateUserRequest</a>)(<a href="https://pkg.go.dev/builtin/#nil">nil</a>),
+    (*<a href="#LoginUserRequest">LoginUserRequest</a>)(<a href="https://pkg.go.dev/builtin/#nil">nil</a>),
+    (*<a href="#VerifyEmailRequest">VerifyEmailRequest</a>)(<a href="https://pkg.go.dev/builtin/#nil">nil</a>),
+    (*<a href="#CreateUserResponse">CreateUserResponse</a>)(<a href="https://pkg.go.dev/builtin/#nil">nil</a>),
+    (*<a href="#UpdateUserResponse">UpdateUserResponse</a>)(<a href="https://pkg.go.dev/builtin/#nil">nil</a>),
+    (*<a href="#LoginUserResponse">LoginUserResponse</a>)(<a href="https://pkg.go.dev/builtin/#nil">nil</a>),
+    (*<a href="#VerifyEmailResponse">VerifyEmailResponse</a>)(<a href="https://pkg.go.dev/builtin/#nil">nil</a>),
+}</pre>
+			
+				
+				<pre>var <span id="file_service_bookkeeper_proto_rawDesc">file_service_bookkeeper_proto_rawDesc</span> = []<a href="https://pkg.go.dev/builtin/#byte">byte</a>{
+    0x0a, 0x18, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x5f, 0x62, 0x6f, 0x6f, 0x6b, 0x6b, 0x65,
+    0x65, 0x70, 0x65, 0x72, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x08, 0x70, 0x72, 0x6f, 0x74,
+    0x6f, 0x67, 0x65, 0x6e, 0x1a, 0x1c, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2f, 0x61, 0x70, 0x69,
+    0x2f, 0x61, 0x6e, 0x6e, 0x6f, 0x74, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x70, 0x72, 0x6f,
+    0x74, 0x6f, 0x1a, 0x15, 0x72, 0x70, 0x63, 0x5f, 0x63, 0x72, 0x65, 0x61, 0x74, 0x65, 0x5f, 0x75,
+    0x73, 0x65, 0x72, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x15, 0x72, 0x70, 0x63, 0x5f, 0x75,
+    0x70, 0x64, 0x61, 0x74, 0x65, 0x5f, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+    0x1a, 0x14, 0x72, 0x70, 0x63, 0x5f, 0x6c, 0x6f, 0x67, 0x69, 0x6e, 0x5f, 0x75, 0x73, 0x65, 0x72,
+    0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x16, 0x72, 0x70, 0x63, 0x5f, 0x76, 0x65, 0x72, 0x69,
+    0x66, 0x79, 0x5f, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x2e,
+    0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x2d, 0x67, 0x65, 0x6e, 0x2d, 0x6f, 0x70, 0x65, 0x6e, 0x61,
+    0x70, 0x69, 0x76, 0x32, 0x2f, 0x6f, 0x70, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2f, 0x61, 0x6e, 0x6e,
+    0x6f, 0x74, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x32, 0x93,
+    0x05, 0x0a, 0x0a, 0x62, 0x6f, 0x6f, 0x6b, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72, 0x12, 0x9a, 0x01,
+    0x0a, 0x0a, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x55, 0x73, 0x65, 0x72, 0x12, 0x1b, 0x2e, 0x70,
+    0x72, 0x6f, 0x74, 0x6f, 0x67, 0x65, 0x6e, 0x2e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x55, 0x73,
+    0x65, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1c, 0x2e, 0x70, 0x72, 0x6f, 0x74,
+    0x6f, 0x67, 0x65, 0x6e, 0x2e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x55, 0x73, 0x65, 0x72, 0x52,
+    0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x51, 0x92, 0x41, 0x34, 0x12, 0x0f, 0x43, 0x72,
+    0x65, 0x61, 0x74, 0x65, 0x20, 0x6e, 0x65, 0x77, 0x20, 0x75, 0x73, 0x65, 0x72, 0x1a, 0x21, 0x55,
+    0x73, 0x65, 0x20, 0x74, 0x68, 0x69, 0x73, 0x20, 0x41, 0x50, 0x49, 0x20, 0x74, 0x6f, 0x20, 0x63,
+    0x72, 0x65, 0x61, 0x74, 0x65, 0x20, 0x61, 0x20, 0x6e, 0x65, 0x77, 0x20, 0x75, 0x73, 0x65, 0x72,
+    0x82, 0xd3, 0xe4, 0x93, 0x02, 0x14, 0x3a, 0x01, 0x2a, 0x22, 0x0f, 0x2f, 0x76, 0x31, 0x2f, 0x63,
+    0x72, 0x65, 0x61, 0x74, 0x65, 0x5f, 0x75, 0x73, 0x65, 0x72, 0x12, 0x90, 0x01, 0x0a, 0x0a, 0x55,
+    0x70, 0x64, 0x61, 0x74, 0x65, 0x55, 0x73, 0x65, 0x72, 0x12, 0x1b, 0x2e, 0x70, 0x72, 0x6f, 0x74,
+    0x6f, 0x67, 0x65, 0x6e, 0x2e, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x55, 0x73, 0x65, 0x72, 0x52,
+    0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1c, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x67, 0x65,
+    0x6e, 0x2e, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x55, 0x73, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70,
+    0x6f, 0x6e, 0x73, 0x65, 0x22, 0x47, 0x92, 0x41, 0x2a, 0x12, 0x0b, 0x55, 0x70, 0x64, 0x61, 0x74,
+    0x65, 0x20, 0x75, 0x73, 0x65, 0x72, 0x1a, 0x1b, 0x55, 0x73, 0x65, 0x20, 0x74, 0x68, 0x69, 0x73,
+    0x20, 0x41, 0x50, 0x49, 0x20, 0x74, 0x6f, 0x20, 0x75, 0x70, 0x64, 0x61, 0x74, 0x65, 0x20, 0x75,
+    0x73, 0x65, 0x72, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x14, 0x3a, 0x01, 0x2a, 0x32, 0x0f, 0x2f, 0x76,
+    0x31, 0x2f, 0x75, 0x70, 0x64, 0x61, 0x74, 0x65, 0x5f, 0x75, 0x73, 0x65, 0x72, 0x12, 0xaf, 0x01,
+    0x0a, 0x09, 0x4c, 0x6f, 0x67, 0x69, 0x6e, 0x55, 0x73, 0x65, 0x72, 0x12, 0x1a, 0x2e, 0x70, 0x72,
+    0x6f, 0x74, 0x6f, 0x67, 0x65, 0x6e, 0x2e, 0x4c, 0x6f, 0x67, 0x69, 0x6e, 0x55, 0x73, 0x65, 0x72,
+    0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1b, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x67,
+    0x65, 0x6e, 0x2e, 0x4c, 0x6f, 0x67, 0x69, 0x6e, 0x55, 0x73, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70,
+    0x6f, 0x6e, 0x73, 0x65, 0x22, 0x69, 0x92, 0x41, 0x4d, 0x12, 0x0a, 0x4c, 0x6f, 0x67, 0x69, 0x6e,
+    0x20, 0x75, 0x73, 0x65, 0x72, 0x1a, 0x3f, 0x55, 0x73, 0x65, 0x20, 0x74, 0x68, 0x69, 0x73, 0x20,
+    0x41, 0x50, 0x49, 0x20, 0x74, 0x6f, 0x20, 0x6c, 0x6f, 0x67, 0x69, 0x6e, 0x20, 0x75, 0x73, 0x65,
+    0x72, 0x20, 0x61, 0x6e, 0x64, 0x20, 0x67, 0x65, 0x74, 0x20, 0x61, 0x63, 0x63, 0x65, 0x73, 0x73,
+    0x20, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x20, 0x26, 0x20, 0x72, 0x65, 0x66, 0x72, 0x65, 0x73, 0x68,
+    0x20, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x13, 0x3a, 0x01, 0x2a, 0x22,
+    0x0e, 0x2f, 0x76, 0x31, 0x2f, 0x6c, 0x6f, 0x67, 0x69, 0x6e, 0x5f, 0x75, 0x73, 0x65, 0x72, 0x12,
+    0xa2, 0x01, 0x0a, 0x0b, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x45, 0x6d, 0x61, 0x69, 0x6c, 0x12,
+    0x1c, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x67, 0x65, 0x6e, 0x2e, 0x56, 0x65, 0x72, 0x69, 0x66,
+    0x79, 0x45, 0x6d, 0x61, 0x69, 0x6c, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1d, 0x2e,
+    0x70, 0x72, 0x6f, 0x74, 0x6f, 0x67, 0x65, 0x6e, 0x2e, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x45,
+    0x6d, 0x61, 0x69, 0x6c, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x56, 0x92, 0x41,
+    0x3b, 0x12, 0x0c, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x20, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x1a,
+    0x2b, 0x55, 0x73, 0x65, 0x20, 0x74, 0x68, 0x69, 0x73, 0x20, 0x41, 0x50, 0x49, 0x20, 0x74, 0x6f,
+    0x20, 0x76, 0x65, 0x72, 0x69, 0x66, 0x79, 0x20, 0x75, 0x73, 0x65, 0x72, 0x27, 0x73, 0x20, 0x65,
+    0x6d, 0x61, 0x69, 0x6c, 0x20, 0x61, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x82, 0xd3, 0xe4, 0x93,
+    0x02, 0x12, 0x12, 0x10, 0x2f, 0x76, 0x31, 0x2f, 0x76, 0x65, 0x72, 0x69, 0x66, 0x79, 0x5f, 0x65,
+    0x6d, 0x61, 0x69, 0x6c, 0x42, 0x79, 0x92, 0x41, 0x58, 0x12, 0x56, 0x0a, 0x0e, 0x42, 0x6f, 0x6f,
+    0x6b, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72, 0x20, 0x41, 0x50, 0x49, 0x22, 0x3f, 0x0a, 0x0a, 0x4a,
+    0x6f, 0x72, 0x61, 0x20, 0x54, 0x72, 0x75, 0x73, 0x68, 0x12, 0x1c, 0x68, 0x74, 0x74, 0x70, 0x73,
+    0x3a, 0x2f, 0x2f, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x74, 0x65,
+    0x6e, 0x73, 0x6f, 0x72, 0x75, 0x73, 0x68, 0x1a, 0x13, 0x74, 0x65, 0x6e, 0x73, 0x6f, 0x72, 0x75,
+    0x73, 0x68, 0x40, 0x67, 0x6d, 0x61, 0x69, 0x6c, 0x2e, 0x63, 0x6f, 0x6d, 0x32, 0x03, 0x31, 0x2e,
+    0x32, 0x5a, 0x1c, 0x62, 0x6f, 0x6f, 0x6b, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72, 0x2f, 0x69, 0x6e,
+    0x74, 0x65, 0x72, 0x6e, 0x61, 0x6c, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x67, 0x65, 0x6e, 0x62,
+    0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+}</pre>
+			
+				
+				<pre>var <span id="file_user_proto_depIdxs">file_user_proto_depIdxs</span> = []<a href="https://pkg.go.dev/builtin/#int32">int32</a>{
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    0,
+}</pre>
+			
+				
+				<pre>var <span id="file_user_proto_goTypes">file_user_proto_goTypes</span> = []interface{}{
+    (*<a href="#User">User</a>)(<a href="https://pkg.go.dev/builtin/#nil">nil</a>),
+    (*<a href="https://pkg.go.dev/google.golang.org/protobuf/types/known/timestamppb/">timestamppb</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/types/known/timestamppb/#Timestamp">Timestamp</a>)(<a href="https://pkg.go.dev/builtin/#nil">nil</a>),
+}</pre>
+			
+				
+				<pre>var <span id="file_user_proto_msgTypes">file_user_proto_msgTypes</span> = <a href="https://pkg.go.dev/builtin/#make">make</a>([]<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#MessageInfo">MessageInfo</a>, 1)</pre>
+			
+				
+				<pre>var <span id="file_user_proto_rawDesc">file_user_proto_rawDesc</span> = []<a href="https://pkg.go.dev/builtin/#byte">byte</a>{
+    0x0a, 0x0a, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x08, 0x70, 0x72,
+    0x6f, 0x74, 0x6f, 0x67, 0x65, 0x6e, 0x1a, 0x1f, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2f, 0x70,
+    0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2f, 0x74, 0x69, 0x6d, 0x65, 0x73, 0x74, 0x61, 0x6d,
+    0x70, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0xdc, 0x01, 0x0a, 0x04, 0x55, 0x73, 0x65, 0x72,
+    0x12, 0x1a, 0x0a, 0x08, 0x75, 0x73, 0x65, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01,
+    0x28, 0x09, 0x52, 0x08, 0x75, 0x73, 0x65, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x12, 0x1b, 0x0a, 0x09,
+    0x66, 0x75, 0x6c, 0x6c, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52,
+    0x08, 0x66, 0x75, 0x6c, 0x6c, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x14, 0x0a, 0x05, 0x65, 0x6d, 0x61,
+    0x69, 0x6c, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x12,
+    0x4a, 0x0a, 0x13, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x5f, 0x63, 0x68, 0x61, 0x6e,
+    0x67, 0x65, 0x64, 0x5f, 0x61, 0x74, 0x18, 0x04, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1a, 0x2e, 0x67,
+    0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x54,
+    0x69, 0x6d, 0x65, 0x73, 0x74, 0x61, 0x6d, 0x70, 0x52, 0x11, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f,
+    0x72, 0x64, 0x43, 0x68, 0x61, 0x6e, 0x67, 0x65, 0x64, 0x41, 0x74, 0x12, 0x39, 0x0a, 0x0a, 0x63,
+    0x72, 0x65, 0x61, 0x74, 0x65, 0x64, 0x5f, 0x61, 0x74, 0x18, 0x05, 0x20, 0x01, 0x28, 0x0b, 0x32,
+    0x1a, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75,
+    0x66, 0x2e, 0x54, 0x69, 0x6d, 0x65, 0x73, 0x74, 0x61, 0x6d, 0x70, 0x52, 0x09, 0x63, 0x72, 0x65,
+    0x61, 0x74, 0x65, 0x64, 0x41, 0x74, 0x42, 0x1e, 0x5a, 0x1c, 0x62, 0x6f, 0x6f, 0x6b, 0x6b, 0x65,
+    0x65, 0x70, 0x65, 0x72, 0x2f, 0x69, 0x6e, 0x74, 0x65, 0x72, 0x6e, 0x61, 0x6c, 0x2f, 0x70, 0x72,
+    0x6f, 0x74, 0x6f, 0x67, 0x65, 0x6e, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+}</pre>
+			
+				
+				<pre>var (
+    <span id="filter_Bookkeeper_VerifyEmail_0">filter_Bookkeeper_VerifyEmail_0</span> = &amp;<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/utilities/">utilities</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/utilities/#DoubleArray">DoubleArray</a>{<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/utilities/#DoubleArray.Encoding">Encoding</a>: map[<a href="https://pkg.go.dev/builtin/#string">string</a>]<a href="https://pkg.go.dev/builtin/#int">int</a>{}, <a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/utilities/#DoubleArray.Base">Base</a>: []<a href="https://pkg.go.dev/builtin/#int">int</a>(<a href="https://pkg.go.dev/builtin/#nil">nil</a>), <a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/utilities/#DoubleArray.Check">Check</a>: []<a href="https://pkg.go.dev/builtin/#int">int</a>(<a href="https://pkg.go.dev/builtin/#nil">nil</a>)}
+)</pre>
 			
 		
 		
@@ -599,6 +1143,318 @@ Note that using this registration option will cause many gRPC library features t
 			
 
 		
+			
+			
+			<h2 id="_Bookkeeper_CreateUser_Handler">func <a href="/src/bookkeeper/internal/protogen/service_bookkeeper_grpc.pb.go.html#L122">_Bookkeeper_CreateUser_Handler</a>
+				<a class="permalink" href="#_Bookkeeper_CreateUser_Handler">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func _Bookkeeper_CreateUser_Handler(srv interface{}, ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, dec func(interface{}) <a href="https://pkg.go.dev/builtin/#error">error</a>, interceptor <a href="https://pkg.go.dev/google.golang.org/grpc/">grpc</a>.<a href="https://pkg.go.dev/google.golang.org/grpc/#UnaryServerInterceptor">UnaryServerInterceptor</a>) (interface{}, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="_Bookkeeper_LoginUser_Handler">func <a href="/src/bookkeeper/internal/protogen/service_bookkeeper_grpc.pb.go.html#L158">_Bookkeeper_LoginUser_Handler</a>
+				<a class="permalink" href="#_Bookkeeper_LoginUser_Handler">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func _Bookkeeper_LoginUser_Handler(srv interface{}, ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, dec func(interface{}) <a href="https://pkg.go.dev/builtin/#error">error</a>, interceptor <a href="https://pkg.go.dev/google.golang.org/grpc/">grpc</a>.<a href="https://pkg.go.dev/google.golang.org/grpc/#UnaryServerInterceptor">UnaryServerInterceptor</a>) (interface{}, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="_Bookkeeper_UpdateUser_Handler">func <a href="/src/bookkeeper/internal/protogen/service_bookkeeper_grpc.pb.go.html#L140">_Bookkeeper_UpdateUser_Handler</a>
+				<a class="permalink" href="#_Bookkeeper_UpdateUser_Handler">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func _Bookkeeper_UpdateUser_Handler(srv interface{}, ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, dec func(interface{}) <a href="https://pkg.go.dev/builtin/#error">error</a>, interceptor <a href="https://pkg.go.dev/google.golang.org/grpc/">grpc</a>.<a href="https://pkg.go.dev/google.golang.org/grpc/#UnaryServerInterceptor">UnaryServerInterceptor</a>) (interface{}, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="_Bookkeeper_VerifyEmail_Handler">func <a href="/src/bookkeeper/internal/protogen/service_bookkeeper_grpc.pb.go.html#L176">_Bookkeeper_VerifyEmail_Handler</a>
+				<a class="permalink" href="#_Bookkeeper_VerifyEmail_Handler">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func _Bookkeeper_VerifyEmail_Handler(srv interface{}, ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, dec func(interface{}) <a href="https://pkg.go.dev/builtin/#error">error</a>, interceptor <a href="https://pkg.go.dev/google.golang.org/grpc/">grpc</a>.<a href="https://pkg.go.dev/google.golang.org/grpc/#UnaryServerInterceptor">UnaryServerInterceptor</a>) (interface{}, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="file_rpc_create_user_proto_init">func <a href="/src/bookkeeper/internal/protogen/rpc_create_user.pb.go.html#L191">file_rpc_create_user_proto_init</a>
+				<a class="permalink" href="#file_rpc_create_user_proto_init">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func file_rpc_create_user_proto_init()</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="file_rpc_create_user_proto_rawDescGZIP">func <a href="/src/bookkeeper/internal/protogen/rpc_create_user.pb.go.html#L168">file_rpc_create_user_proto_rawDescGZIP</a>
+				<a class="permalink" href="#file_rpc_create_user_proto_rawDescGZIP">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func file_rpc_create_user_proto_rawDescGZIP() []<a href="https://pkg.go.dev/builtin/#byte">byte</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="file_rpc_login_user_proto_init">func <a href="/src/bookkeeper/internal/protogen/rpc_login_user.pb.go.html#L235">file_rpc_login_user_proto_init</a>
+				<a class="permalink" href="#file_rpc_login_user_proto_init">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func file_rpc_login_user_proto_init()</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="file_rpc_login_user_proto_rawDescGZIP">func <a href="/src/bookkeeper/internal/protogen/rpc_login_user.pb.go.html#L209">file_rpc_login_user_proto_rawDescGZIP</a>
+				<a class="permalink" href="#file_rpc_login_user_proto_rawDescGZIP">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func file_rpc_login_user_proto_rawDescGZIP() []<a href="https://pkg.go.dev/builtin/#byte">byte</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="file_rpc_update_user_proto_init">func <a href="/src/bookkeeper/internal/protogen/rpc_update_user.pb.go.html#L195">file_rpc_update_user_proto_init</a>
+				<a class="permalink" href="#file_rpc_update_user_proto_init">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func file_rpc_update_user_proto_init()</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="file_rpc_update_user_proto_rawDescGZIP">func <a href="/src/bookkeeper/internal/protogen/rpc_update_user.pb.go.html#L172">file_rpc_update_user_proto_rawDescGZIP</a>
+				<a class="permalink" href="#file_rpc_update_user_proto_rawDescGZIP">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func file_rpc_update_user_proto_rawDescGZIP() []<a href="https://pkg.go.dev/builtin/#byte">byte</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="file_rpc_verify_email_proto_init">func <a href="/src/bookkeeper/internal/protogen/rpc_verify_email.pb.go.html#L170">file_rpc_verify_email_proto_init</a>
+				<a class="permalink" href="#file_rpc_verify_email_proto_init">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func file_rpc_verify_email_proto_init()</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="file_rpc_verify_email_proto_rawDescGZIP">func <a href="/src/bookkeeper/internal/protogen/rpc_verify_email.pb.go.html#L149">file_rpc_verify_email_proto_rawDescGZIP</a>
+				<a class="permalink" href="#file_rpc_verify_email_proto_rawDescGZIP">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func file_rpc_verify_email_proto_rawDescGZIP() []<a href="https://pkg.go.dev/builtin/#byte">byte</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="file_service_bookkeeper_proto_init">func <a href="/src/bookkeeper/internal/protogen/service_bookkeeper.pb.go.html#L119">file_service_bookkeeper_proto_init</a>
+				<a class="permalink" href="#file_service_bookkeeper_proto_init">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func file_service_bookkeeper_proto_init()</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="file_user_proto_init">func <a href="/src/bookkeeper/internal/protogen/user.pb.go.html#L156">file_user_proto_init</a>
+				<a class="permalink" href="#file_user_proto_init">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func file_user_proto_init()</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="file_user_proto_rawDescGZIP">func <a href="/src/bookkeeper/internal/protogen/user.pb.go.html#L133">file_user_proto_rawDescGZIP</a>
+				<a class="permalink" href="#file_user_proto_rawDescGZIP">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func file_user_proto_rawDescGZIP() []<a href="https://pkg.go.dev/builtin/#byte">byte</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="init">func <a href="/src/bookkeeper/internal/protogen/user.pb.go.html#L155">init</a>
+				<a class="permalink" href="#init">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func init()</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="local_request_Bookkeeper_CreateUser_0">func <a href="/src/bookkeeper/internal/protogen/service_bookkeeper.pb.gw.go.html#L51">local_request_Bookkeeper_CreateUser_0</a>
+				<a class="permalink" href="#local_request_Bookkeeper_CreateUser_0">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func local_request_Bookkeeper_CreateUser_0(ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, marshaler <a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#Marshaler">Marshaler</a>, server <a href="#BookkeeperServer">BookkeeperServer</a>, req *<a href="https://pkg.go.dev/net/http/">http</a>.<a href="https://pkg.go.dev/net/http/#Request">Request</a>, pathParams map[<a href="https://pkg.go.dev/builtin/#string">string</a>]<a href="https://pkg.go.dev/builtin/#string">string</a>) (<a href="https://pkg.go.dev/google.golang.org/protobuf/proto/">proto</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/proto/#Message">Message</a>, <a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#ServerMetadata">ServerMetadata</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="local_request_Bookkeeper_LoginUser_0">func <a href="/src/bookkeeper/internal/protogen/service_bookkeeper.pb.gw.go.html#L119">local_request_Bookkeeper_LoginUser_0</a>
+				<a class="permalink" href="#local_request_Bookkeeper_LoginUser_0">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func local_request_Bookkeeper_LoginUser_0(ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, marshaler <a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#Marshaler">Marshaler</a>, server <a href="#BookkeeperServer">BookkeeperServer</a>, req *<a href="https://pkg.go.dev/net/http/">http</a>.<a href="https://pkg.go.dev/net/http/#Request">Request</a>, pathParams map[<a href="https://pkg.go.dev/builtin/#string">string</a>]<a href="https://pkg.go.dev/builtin/#string">string</a>) (<a href="https://pkg.go.dev/google.golang.org/protobuf/proto/">proto</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/proto/#Message">Message</a>, <a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#ServerMetadata">ServerMetadata</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="local_request_Bookkeeper_UpdateUser_0">func <a href="/src/bookkeeper/internal/protogen/service_bookkeeper.pb.gw.go.html#L85">local_request_Bookkeeper_UpdateUser_0</a>
+				<a class="permalink" href="#local_request_Bookkeeper_UpdateUser_0">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func local_request_Bookkeeper_UpdateUser_0(ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, marshaler <a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#Marshaler">Marshaler</a>, server <a href="#BookkeeperServer">BookkeeperServer</a>, req *<a href="https://pkg.go.dev/net/http/">http</a>.<a href="https://pkg.go.dev/net/http/#Request">Request</a>, pathParams map[<a href="https://pkg.go.dev/builtin/#string">string</a>]<a href="https://pkg.go.dev/builtin/#string">string</a>) (<a href="https://pkg.go.dev/google.golang.org/protobuf/proto/">proto</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/proto/#Message">Message</a>, <a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#ServerMetadata">ServerMetadata</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="local_request_Bookkeeper_VerifyEmail_0">func <a href="/src/bookkeeper/internal/protogen/service_bookkeeper.pb.gw.go.html#L156">local_request_Bookkeeper_VerifyEmail_0</a>
+				<a class="permalink" href="#local_request_Bookkeeper_VerifyEmail_0">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func local_request_Bookkeeper_VerifyEmail_0(ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, marshaler <a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#Marshaler">Marshaler</a>, server <a href="#BookkeeperServer">BookkeeperServer</a>, req *<a href="https://pkg.go.dev/net/http/">http</a>.<a href="https://pkg.go.dev/net/http/#Request">Request</a>, pathParams map[<a href="https://pkg.go.dev/builtin/#string">string</a>]<a href="https://pkg.go.dev/builtin/#string">string</a>) (<a href="https://pkg.go.dev/google.golang.org/protobuf/proto/">proto</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/proto/#Message">Message</a>, <a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#ServerMetadata">ServerMetadata</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="request_Bookkeeper_CreateUser_0">func <a href="/src/bookkeeper/internal/protogen/service_bookkeeper.pb.gw.go.html#L34">request_Bookkeeper_CreateUser_0</a>
+				<a class="permalink" href="#request_Bookkeeper_CreateUser_0">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func request_Bookkeeper_CreateUser_0(ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, marshaler <a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#Marshaler">Marshaler</a>, client <a href="#BookkeeperClient">BookkeeperClient</a>, req *<a href="https://pkg.go.dev/net/http/">http</a>.<a href="https://pkg.go.dev/net/http/#Request">Request</a>, pathParams map[<a href="https://pkg.go.dev/builtin/#string">string</a>]<a href="https://pkg.go.dev/builtin/#string">string</a>) (<a href="https://pkg.go.dev/google.golang.org/protobuf/proto/">proto</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/proto/#Message">Message</a>, <a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#ServerMetadata">ServerMetadata</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="request_Bookkeeper_LoginUser_0">func <a href="/src/bookkeeper/internal/protogen/service_bookkeeper.pb.gw.go.html#L102">request_Bookkeeper_LoginUser_0</a>
+				<a class="permalink" href="#request_Bookkeeper_LoginUser_0">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func request_Bookkeeper_LoginUser_0(ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, marshaler <a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#Marshaler">Marshaler</a>, client <a href="#BookkeeperClient">BookkeeperClient</a>, req *<a href="https://pkg.go.dev/net/http/">http</a>.<a href="https://pkg.go.dev/net/http/#Request">Request</a>, pathParams map[<a href="https://pkg.go.dev/builtin/#string">string</a>]<a href="https://pkg.go.dev/builtin/#string">string</a>) (<a href="https://pkg.go.dev/google.golang.org/protobuf/proto/">proto</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/proto/#Message">Message</a>, <a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#ServerMetadata">ServerMetadata</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="request_Bookkeeper_UpdateUser_0">func <a href="/src/bookkeeper/internal/protogen/service_bookkeeper.pb.gw.go.html#L68">request_Bookkeeper_UpdateUser_0</a>
+				<a class="permalink" href="#request_Bookkeeper_UpdateUser_0">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func request_Bookkeeper_UpdateUser_0(ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, marshaler <a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#Marshaler">Marshaler</a>, client <a href="#BookkeeperClient">BookkeeperClient</a>, req *<a href="https://pkg.go.dev/net/http/">http</a>.<a href="https://pkg.go.dev/net/http/#Request">Request</a>, pathParams map[<a href="https://pkg.go.dev/builtin/#string">string</a>]<a href="https://pkg.go.dev/builtin/#string">string</a>) (<a href="https://pkg.go.dev/google.golang.org/protobuf/proto/">proto</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/proto/#Message">Message</a>, <a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#ServerMetadata">ServerMetadata</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="request_Bookkeeper_VerifyEmail_0">func <a href="/src/bookkeeper/internal/protogen/service_bookkeeper.pb.gw.go.html#L140">request_Bookkeeper_VerifyEmail_0</a>
+				<a class="permalink" href="#request_Bookkeeper_VerifyEmail_0">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func request_Bookkeeper_VerifyEmail_0(ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, marshaler <a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#Marshaler">Marshaler</a>, client <a href="#BookkeeperClient">BookkeeperClient</a>, req *<a href="https://pkg.go.dev/net/http/">http</a>.<a href="https://pkg.go.dev/net/http/#Request">Request</a>, pathParams map[<a href="https://pkg.go.dev/builtin/#string">string</a>]<a href="https://pkg.go.dev/builtin/#string">string</a>) (<a href="https://pkg.go.dev/google.golang.org/protobuf/proto/">proto</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/proto/#Message">Message</a>, <a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/">runtime</a>.<a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2/runtime/#ServerMetadata">ServerMetadata</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
 		
 			
 			
@@ -656,7 +1512,7 @@ for forward compatibility
     UpdateUser(<a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, *<a href="#UpdateUserRequest">UpdateUserRequest</a>) (*<a href="#UpdateUserResponse">UpdateUserResponse</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)
     LoginUser(<a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, *<a href="#LoginUserRequest">LoginUserRequest</a>) (*<a href="#LoginUserResponse">LoginUserResponse</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)
     VerifyEmail(<a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, *<a href="#VerifyEmailRequest">VerifyEmailRequest</a>) (*<a href="#VerifyEmailResponse">VerifyEmailResponse</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)
-    <span class="comment">// contains filtered or unexported methods</span>
+    mustEmbedUnimplementedBookkeeperServer()
 }</pre>
 
 			
@@ -680,11 +1536,14 @@ for forward compatibility
 			</h2>
 			
 			<pre>type CreateUserRequest struct {
+<span id="CreateUserRequest.state"></span>    state         <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#MessageState">MessageState</a>
+<span id="CreateUserRequest.sizeCache"></span>    sizeCache     <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#SizeCache">SizeCache</a>
+<span id="CreateUserRequest.unknownFields"></span>    unknownFields <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#UnknownFields">UnknownFields</a>
+
 <span id="CreateUserRequest.Username"></span>    Username <a href="https://pkg.go.dev/builtin/#string">string</a> `protobuf:&#34;bytes,1,opt,name=username,proto3&#34; json:&#34;username,omitempty&#34;`
 <span id="CreateUserRequest.FullName"></span>    FullName <a href="https://pkg.go.dev/builtin/#string">string</a> `protobuf:&#34;bytes,2,opt,name=full_name,json=fullName,proto3&#34; json:&#34;full_name,omitempty&#34;`
 <span id="CreateUserRequest.Email"></span>    Email    <a href="https://pkg.go.dev/builtin/#string">string</a> `protobuf:&#34;bytes,3,opt,name=email,proto3&#34; json:&#34;email,omitempty&#34;`
 <span id="CreateUserRequest.Password"></span>    Password <a href="https://pkg.go.dev/builtin/#string">string</a> `protobuf:&#34;bytes,4,opt,name=password,proto3&#34; json:&#34;password,omitempty&#34;`
-    <span class="comment">// contains filtered or unexported fields</span>
 }
 </pre>
 
@@ -818,8 +1677,11 @@ for forward compatibility
 			</h2>
 			
 			<pre>type CreateUserResponse struct {
+<span id="CreateUserResponse.state"></span>    state         <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#MessageState">MessageState</a>
+<span id="CreateUserResponse.sizeCache"></span>    sizeCache     <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#SizeCache">SizeCache</a>
+<span id="CreateUserResponse.unknownFields"></span>    unknownFields <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#UnknownFields">UnknownFields</a>
+
 <span id="CreateUserResponse.User"></span>    User *<a href="#User">User</a> `protobuf:&#34;bytes,1,opt,name=user,proto3&#34; json:&#34;user,omitempty&#34;`
-    <span class="comment">// contains filtered or unexported fields</span>
 }
 </pre>
 
@@ -917,9 +1779,12 @@ for forward compatibility
 			</h2>
 			
 			<pre>type LoginUserRequest struct {
+<span id="LoginUserRequest.state"></span>    state         <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#MessageState">MessageState</a>
+<span id="LoginUserRequest.sizeCache"></span>    sizeCache     <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#SizeCache">SizeCache</a>
+<span id="LoginUserRequest.unknownFields"></span>    unknownFields <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#UnknownFields">UnknownFields</a>
+
 <span id="LoginUserRequest.Username"></span>    Username <a href="https://pkg.go.dev/builtin/#string">string</a> `protobuf:&#34;bytes,1,opt,name=username,proto3&#34; json:&#34;username,omitempty&#34;`
 <span id="LoginUserRequest.Password"></span>    Password <a href="https://pkg.go.dev/builtin/#string">string</a> `protobuf:&#34;bytes,2,opt,name=password,proto3&#34; json:&#34;password,omitempty&#34;`
-    <span class="comment">// contains filtered or unexported fields</span>
 }
 </pre>
 
@@ -1029,13 +1894,16 @@ for forward compatibility
 			</h2>
 			
 			<pre>type LoginUserResponse struct {
+<span id="LoginUserResponse.state"></span>    state         <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#MessageState">MessageState</a>
+<span id="LoginUserResponse.sizeCache"></span>    sizeCache     <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#SizeCache">SizeCache</a>
+<span id="LoginUserResponse.unknownFields"></span>    unknownFields <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#UnknownFields">UnknownFields</a>
+
 <span id="LoginUserResponse.User"></span>    User                  *<a href="#User">User</a>                  `protobuf:&#34;bytes,1,opt,name=user,proto3&#34; json:&#34;user,omitempty&#34;`
 <span id="LoginUserResponse.SessionId"></span>    SessionId             <a href="https://pkg.go.dev/builtin/#string">string</a>                 `protobuf:&#34;bytes,2,opt,name=session_id,json=sessionId,proto3&#34; json:&#34;session_id,omitempty&#34;`
 <span id="LoginUserResponse.AccessToken"></span>    AccessToken           <a href="https://pkg.go.dev/builtin/#string">string</a>                 `protobuf:&#34;bytes,3,opt,name=access_token,json=accessToken,proto3&#34; json:&#34;access_token,omitempty&#34;`
 <span id="LoginUserResponse.RefreshToken"></span>    RefreshToken          <a href="https://pkg.go.dev/builtin/#string">string</a>                 `protobuf:&#34;bytes,4,opt,name=refresh_token,json=refreshToken,proto3&#34; json:&#34;refresh_token,omitempty&#34;`
 <span id="LoginUserResponse.AccessTokenExpiresAt"></span>    AccessTokenExpiresAt  *<a href="https://pkg.go.dev/google.golang.org/protobuf/types/known/timestamppb/">timestamppb</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/types/known/timestamppb/#Timestamp">Timestamp</a> `protobuf:&#34;bytes,5,opt,name=access_token_expires_at,json=accessTokenExpiresAt,proto3&#34; json:&#34;access_token_expires_at,omitempty&#34;`
 <span id="LoginUserResponse.RefreshTokenExpiresAt"></span>    RefreshTokenExpiresAt *<a href="https://pkg.go.dev/google.golang.org/protobuf/types/known/timestamppb/">timestamppb</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/types/known/timestamppb/#Timestamp">Timestamp</a> `protobuf:&#34;bytes,6,opt,name=refresh_token_expires_at,json=refreshTokenExpiresAt,proto3&#34; json:&#34;refresh_token_expires_at,omitempty&#34;`
-    <span class="comment">// contains filtered or unexported fields</span>
 }
 </pre>
 
@@ -1256,6 +2124,18 @@ for forward compatibility
 				
 				
 			
+				
+				<h3 id="UnimplementedBookkeeperServer.mustEmbedUnimplementedBookkeeperServer">func (UnimplementedBookkeeperServer) <a href="/src/bookkeeper/internal/protogen/service_bookkeeper_grpc.pb.go.html#L109">mustEmbedUnimplementedBookkeeperServer</a>
+					<a class="permalink" href="#UnimplementedBookkeeperServer.mustEmbedUnimplementedBookkeeperServer">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (<a href="#UnimplementedBookkeeperServer">UnimplementedBookkeeperServer</a>) mustEmbedUnimplementedBookkeeperServer()</pre>
+				
+				
+				
+				
+			
 		
 			
 			
@@ -1269,7 +2149,7 @@ Use of this interface is not recommended, as added methods to BookkeeperServer w
 result in compilation errors.
 
 			<pre>type UnsafeBookkeeperServer interface {
-    <span class="comment">// contains filtered or unexported methods</span>
+    mustEmbedUnimplementedBookkeeperServer()
 }</pre>
 
 			
@@ -1293,11 +2173,14 @@ result in compilation errors.
 			</h2>
 			
 			<pre>type UpdateUserRequest struct {
+<span id="UpdateUserRequest.state"></span>    state         <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#MessageState">MessageState</a>
+<span id="UpdateUserRequest.sizeCache"></span>    sizeCache     <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#SizeCache">SizeCache</a>
+<span id="UpdateUserRequest.unknownFields"></span>    unknownFields <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#UnknownFields">UnknownFields</a>
+
 <span id="UpdateUserRequest.Username"></span>    Username <a href="https://pkg.go.dev/builtin/#string">string</a>  `protobuf:&#34;bytes,1,opt,name=username,proto3&#34; json:&#34;username,omitempty&#34;`
 <span id="UpdateUserRequest.FullName"></span>    FullName *<a href="https://pkg.go.dev/builtin/#string">string</a> `protobuf:&#34;bytes,2,opt,name=full_name,json=fullName,proto3,oneof&#34; json:&#34;full_name,omitempty&#34;`
 <span id="UpdateUserRequest.Email"></span>    Email    *<a href="https://pkg.go.dev/builtin/#string">string</a> `protobuf:&#34;bytes,3,opt,name=email,proto3,oneof&#34; json:&#34;email,omitempty&#34;`
 <span id="UpdateUserRequest.Password"></span>    Password *<a href="https://pkg.go.dev/builtin/#string">string</a> `protobuf:&#34;bytes,4,opt,name=password,proto3,oneof&#34; json:&#34;password,omitempty&#34;`
-    <span class="comment">// contains filtered or unexported fields</span>
 }
 </pre>
 
@@ -1431,8 +2314,11 @@ result in compilation errors.
 			</h2>
 			
 			<pre>type UpdateUserResponse struct {
+<span id="UpdateUserResponse.state"></span>    state         <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#MessageState">MessageState</a>
+<span id="UpdateUserResponse.sizeCache"></span>    sizeCache     <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#SizeCache">SizeCache</a>
+<span id="UpdateUserResponse.unknownFields"></span>    unknownFields <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#UnknownFields">UnknownFields</a>
+
 <span id="UpdateUserResponse.User"></span>    User *<a href="#User">User</a> `protobuf:&#34;bytes,1,opt,name=user,proto3&#34; json:&#34;user,omitempty&#34;`
-    <span class="comment">// contains filtered or unexported fields</span>
 }
 </pre>
 
@@ -1530,12 +2416,15 @@ result in compilation errors.
 			</h2>
 			
 			<pre>type User struct {
+<span id="User.state"></span>    state         <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#MessageState">MessageState</a>
+<span id="User.sizeCache"></span>    sizeCache     <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#SizeCache">SizeCache</a>
+<span id="User.unknownFields"></span>    unknownFields <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#UnknownFields">UnknownFields</a>
+
 <span id="User.Username"></span>    Username          <a href="https://pkg.go.dev/builtin/#string">string</a>                 `protobuf:&#34;bytes,1,opt,name=username,proto3&#34; json:&#34;username,omitempty&#34;`
 <span id="User.FullName"></span>    FullName          <a href="https://pkg.go.dev/builtin/#string">string</a>                 `protobuf:&#34;bytes,2,opt,name=full_name,json=fullName,proto3&#34; json:&#34;full_name,omitempty&#34;`
 <span id="User.Email"></span>    Email             <a href="https://pkg.go.dev/builtin/#string">string</a>                 `protobuf:&#34;bytes,3,opt,name=email,proto3&#34; json:&#34;email,omitempty&#34;`
 <span id="User.PasswordChangedAt"></span>    PasswordChangedAt *<a href="https://pkg.go.dev/google.golang.org/protobuf/types/known/timestamppb/">timestamppb</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/types/known/timestamppb/#Timestamp">Timestamp</a> `protobuf:&#34;bytes,4,opt,name=password_changed_at,json=passwordChangedAt,proto3&#34; json:&#34;password_changed_at,omitempty&#34;`
 <span id="User.CreatedAt"></span>    CreatedAt         *<a href="https://pkg.go.dev/google.golang.org/protobuf/types/known/timestamppb/">timestamppb</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/types/known/timestamppb/#Timestamp">Timestamp</a> `protobuf:&#34;bytes,5,opt,name=created_at,json=createdAt,proto3&#34; json:&#34;created_at,omitempty&#34;`
-    <span class="comment">// contains filtered or unexported fields</span>
 }
 </pre>
 
@@ -1681,9 +2570,12 @@ result in compilation errors.
 			</h2>
 			
 			<pre>type VerifyEmailRequest struct {
+<span id="VerifyEmailRequest.state"></span>    state         <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#MessageState">MessageState</a>
+<span id="VerifyEmailRequest.sizeCache"></span>    sizeCache     <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#SizeCache">SizeCache</a>
+<span id="VerifyEmailRequest.unknownFields"></span>    unknownFields <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#UnknownFields">UnknownFields</a>
+
 <span id="VerifyEmailRequest.EmailId"></span>    EmailId    <a href="https://pkg.go.dev/builtin/#int64">int64</a>  `protobuf:&#34;varint,1,opt,name=email_id,json=emailId,proto3&#34; json:&#34;email_id,omitempty&#34;`
 <span id="VerifyEmailRequest.SecretCode"></span>    SecretCode <a href="https://pkg.go.dev/builtin/#string">string</a> `protobuf:&#34;bytes,2,opt,name=secret_code,json=secretCode,proto3&#34; json:&#34;secret_code,omitempty&#34;`
-    <span class="comment">// contains filtered or unexported fields</span>
 }
 </pre>
 
@@ -1793,8 +2685,11 @@ result in compilation errors.
 			</h2>
 			
 			<pre>type VerifyEmailResponse struct {
+<span id="VerifyEmailResponse.state"></span>    state         <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#MessageState">MessageState</a>
+<span id="VerifyEmailResponse.sizeCache"></span>    sizeCache     <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#SizeCache">SizeCache</a>
+<span id="VerifyEmailResponse.unknownFields"></span>    unknownFields <a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/">protoimpl</a>.<a href="https://pkg.go.dev/google.golang.org/protobuf/runtime/protoimpl/#UnknownFields">UnknownFields</a>
+
 <span id="VerifyEmailResponse.IsVerified"></span>    IsVerified <a href="https://pkg.go.dev/builtin/#bool">bool</a> `protobuf:&#34;varint,1,opt,name=is_verified,json=isVerified,proto3&#34; json:&#34;is_verified,omitempty&#34;`
-    <span class="comment">// contains filtered or unexported fields</span>
 }
 </pre>
 
@@ -1877,6 +2772,79 @@ result in compilation errors.
 					
 				</h3>
 				<pre>func (x *<a href="#VerifyEmailResponse">VerifyEmailResponse</a>) String() <a href="https://pkg.go.dev/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="bookkeeperClient">type <a href="/src/bookkeeper/internal/protogen/service_bookkeeper_grpc.pb.go.html#L38">bookkeeperClient</a>
+				<a class="permalink" href="#bookkeeperClient">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type bookkeeperClient struct {
+<span id="bookkeeperClient.cc"></span>    cc <a href="https://pkg.go.dev/google.golang.org/grpc/">grpc</a>.<a href="https://pkg.go.dev/google.golang.org/grpc/#ClientConnInterface">ClientConnInterface</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="bookkeeperClient.CreateUser">func (*bookkeeperClient) <a href="/src/bookkeeper/internal/protogen/service_bookkeeper_grpc.pb.go.html#L46">CreateUser</a>
+					<a class="permalink" href="#bookkeeperClient.CreateUser">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *bookkeeperClient) CreateUser(ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, in *<a href="#CreateUserRequest">CreateUserRequest</a>, opts ...<a href="https://pkg.go.dev/google.golang.org/grpc/">grpc</a>.<a href="https://pkg.go.dev/google.golang.org/grpc/#CallOption">CallOption</a>) (*<a href="#CreateUserResponse">CreateUserResponse</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="bookkeeperClient.LoginUser">func (*bookkeeperClient) <a href="/src/bookkeeper/internal/protogen/service_bookkeeper_grpc.pb.go.html#L64">LoginUser</a>
+					<a class="permalink" href="#bookkeeperClient.LoginUser">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *bookkeeperClient) LoginUser(ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, in *<a href="#LoginUserRequest">LoginUserRequest</a>, opts ...<a href="https://pkg.go.dev/google.golang.org/grpc/">grpc</a>.<a href="https://pkg.go.dev/google.golang.org/grpc/#CallOption">CallOption</a>) (*<a href="#LoginUserResponse">LoginUserResponse</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="bookkeeperClient.UpdateUser">func (*bookkeeperClient) <a href="/src/bookkeeper/internal/protogen/service_bookkeeper_grpc.pb.go.html#L55">UpdateUser</a>
+					<a class="permalink" href="#bookkeeperClient.UpdateUser">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *bookkeeperClient) UpdateUser(ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, in *<a href="#UpdateUserRequest">UpdateUserRequest</a>, opts ...<a href="https://pkg.go.dev/google.golang.org/grpc/">grpc</a>.<a href="https://pkg.go.dev/google.golang.org/grpc/#CallOption">CallOption</a>) (*<a href="#UpdateUserResponse">UpdateUserResponse</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="bookkeeperClient.VerifyEmail">func (*bookkeeperClient) <a href="/src/bookkeeper/internal/protogen/service_bookkeeper_grpc.pb.go.html#L73">VerifyEmail</a>
+					<a class="permalink" href="#bookkeeperClient.VerifyEmail">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *bookkeeperClient) VerifyEmail(ctx <a href="https://pkg.go.dev/context/">context</a>.<a href="https://pkg.go.dev/context/#Context">Context</a>, in *<a href="#VerifyEmailRequest">VerifyEmailRequest</a>, opts ...<a href="https://pkg.go.dev/google.golang.org/grpc/">grpc</a>.<a href="https://pkg.go.dev/google.golang.org/grpc/#CallOption">CallOption</a>) (*<a href="#VerifyEmailResponse">VerifyEmailResponse</a>, <a href="https://pkg.go.dev/builtin/#error">error</a>)</pre>
 				
 				
 				

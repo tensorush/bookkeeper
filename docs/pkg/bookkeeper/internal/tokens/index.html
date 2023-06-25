@@ -105,6 +105,8 @@
 			<div id="manual-nav">
 			<dl>
 			
+				<dd><a href="#pkg-constants">Constants</a></dd>
+			
 			
 				<dd><a href="#pkg-variables">Variables</a></dd>
 			
@@ -182,6 +184,12 @@
 		
 
 		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const <span id="minSecretKeySize">minSecretKeySize</span> = 32</pre>
+			
+		
 		
 			<h2 id="pkg-variables">Variables</h2>
 			
@@ -205,7 +213,7 @@
 			<p>JWTMaker is a JSON Web Token maker.
 
 			<pre>type JWTMaker struct {
-    <span class="comment">// contains filtered or unexported fields</span>
+<span id="JWTMaker.secretKey"></span>    secretKey <a href="https://pkg.go.dev/builtin/#string">string</a>
 }
 </pre>
 
@@ -310,7 +318,8 @@
 			<p>PasetoMaker is a PASETO token maker.
 
 			<pre>type PasetoMaker struct {
-    <span class="comment">// contains filtered or unexported fields</span>
+<span id="PasetoMaker.paseto"></span>    paseto       *<a href="https://pkg.go.dev/github.com/o1egl/paseto/">paseto</a>.<a href="https://pkg.go.dev/github.com/o1egl/paseto/#V2">V2</a>
+<span id="PasetoMaker.symmetricKey"></span>    symmetricKey []<a href="https://pkg.go.dev/builtin/#byte">byte</a>
 }
 </pre>
 

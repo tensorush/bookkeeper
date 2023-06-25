@@ -376,7 +376,7 @@
 			</h2>
 			
 			<pre>type RedisTaskDistributor struct {
-    <span class="comment">// contains filtered or unexported fields</span>
+<span id="RedisTaskDistributor.client"></span>    client *<a href="https://pkg.go.dev/github.com/hibiken/asynq/">asynq</a>.<a href="https://pkg.go.dev/github.com/hibiken/asynq/#Client">Client</a>
 }
 </pre>
 
@@ -417,7 +417,9 @@
 			</h2>
 			
 			<pre>type RedisTaskProcessor struct {
-    <span class="comment">// contains filtered or unexported fields</span>
+<span id="RedisTaskProcessor.server"></span>    server *<a href="https://pkg.go.dev/github.com/hibiken/asynq/">asynq</a>.<a href="https://pkg.go.dev/github.com/hibiken/asynq/#Server">Server</a>
+<span id="RedisTaskProcessor.store"></span>    store  <a href="/pkg/bookkeeper/internal/db/">db</a>.<a href="/pkg/bookkeeper/internal/db/#Store">Store</a>
+<span id="RedisTaskProcessor.mailer"></span>    mailer <a href="/pkg/bookkeeper/internal/notifications/">notifications</a>.<a href="/pkg/bookkeeper/internal/notifications/#EmailSender">EmailSender</a>
 }
 </pre>
 
@@ -557,6 +559,17 @@
 			</tr>
 			
 
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="mock/?m=all">mock</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						Package mockwk is a generated GoMock package.
+					</td>
+				</tr>
 			
 		</table>
 	</div>

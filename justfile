@@ -4,7 +4,6 @@ up *SERVICES:
     docker compose --env-file ./configs/config.env up -d {{ SERVICES }}
     docker compose --env-file ./configs/config.env logs
 
-[unix]
 sleep SECONDS="1":
     sleep {{ SECONDS }}
 
@@ -25,10 +24,7 @@ gen: sqlc protoc mockgen
 sqlc:
     sqlc generate -f ./configs/sqlc.yaml
 
-[unix]
 protoc:
-    rm -f ./internal/protogen/*.go
-    rm -f ./dbdocs/swagger/*.swagger.json
     protoc --proto_path=./internal/proto/ --go_out=./internal/protogen/ --go_opt=paths=source_relative \
         --go-grpc_out=./internal/protogen/ --go-grpc_opt=paths=source_relative \
         --grpc-gateway_out=./internal/protogen/ --grpc-gateway_opt=paths=source_relative \
@@ -43,7 +39,7 @@ mockgen:
 docs: gopages dbdocs
 
 gopages:
-    gopages -out docs
+    gopages -internal -out docs
 
 dbdocs:
     dbdocs build ./dbdocs/db.dbml
