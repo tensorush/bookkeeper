@@ -4,7 +4,7 @@ up *SERVICES:
     docker compose --env-file ./configs/config.env up -d {{ SERVICES }}
     docker compose --env-file ./configs/config.env logs
 
-[linux, macos]
+[unix]
 sleep SECONDS="1":
     sleep {{ SECONDS }}
 
@@ -25,7 +25,7 @@ gen: sqlc protoc mockgen
 sqlc:
     sqlc generate -f ./configs/sqlc.yaml
 
-[linux, macos]
+[unix]
 protoc:
     rm -f ./internal/protogen/*.go
     rm -f ./dbdocs/swagger/*.swagger.json
