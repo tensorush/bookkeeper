@@ -1,7 +1,7 @@
 docker-test: (up "postgres") sleep migrate test down
 
 up *SERVICES:
-    docker compose --env-file ./configs/config.env up -d {{ SERVICES }}
+    docker compose --env-file ./configs/config.env up --build -d {{ SERVICES }}
     docker compose --env-file ./configs/config.env logs
 
 sleep SECONDS="1":
