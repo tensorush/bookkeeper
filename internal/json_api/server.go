@@ -34,11 +34,11 @@ func NewServer(config configs.Config, store db.Store) (*Server, error) {
 	}
 
 	if v, ok := binding.Validator.Engine().(*validator.Validate); ok {
-		v.RegisterValidation("currency", validCurrency)
+		err = v.RegisterValidation("currency", validCurrency)
 	}
 
 	server.setupRouter()
-	return server, nil
+	return server, err
 }
 
 func (server *Server) setupRouter() {

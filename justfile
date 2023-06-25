@@ -1,12 +1,10 @@
-test: (up "postgres") sleep migrate gotest down
-
-gotest:
-    go test -v -race -cover -short -count=1 -vet=off ./...
+docker-test: (up "postgres") sleep migrate test down
 
 up *SERVICES:
     docker compose --env-file ./configs/config.env up -d {{ SERVICES }}
     docker compose --env-file ./configs/config.env logs
 
+[linux, macos]
 sleep SECONDS="1":
     sleep {{ SECONDS }}
 
@@ -16,6 +14,9 @@ migrate ADDRESS="postgresql://root:secret@0.0.0.0:5432/bookkeeper?sslmode=disabl
 migration NAME:
     migrate create -ext sql -dir ./internal/db/migrations/ -seq {{ NAME }}
 
+test:
+    go test -v -race -cover -short -count=1 -vet=off ./...
+
 down:
     docker compose --env-file ./configs/config.env down
 
@@ -24,6 +25,7 @@ gen: sqlc protoc mockgen
 sqlc:
     sqlc generate -f ./configs/sqlc.yaml
 
+[linux, macos]
 protoc:
     rm -f ./internal/protogen/*.go
     rm -f ./dbdocs/swagger/*.swagger.json
