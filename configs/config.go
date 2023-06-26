@@ -12,9 +12,12 @@ type Config struct {
 	API                  string        `mapstructure:"API"`
 	Environment          string        `mapstructure:"ENVIRONMENT"`
 	PostgresURI          string        `mapstructure:"POSTGRES_URI"`
-	RedisAddress         string        `mapstructure:"REDIS_ADDRESS"`
-	JSONAPIAddress       string        `mapstructure:"JSON_API_ADDRESS"`
-	GRPCAPIAddress       string        `mapstructure:"GRPC_API_ADDRESS"`
+	RedisHost            string        `mapstructure:"REDIS_HOST"`
+	RedisPort            string        `mapstructure:"REDIS_PORT"`
+	JSONAPIHost          string        `mapstructure:"JSON_API_HOST"`
+	JSONAPIPort          string        `mapstructure:"JSON_API_PORT"`
+	GRPCAPIHost          string        `mapstructure:"GRPC_API_HOST"`
+	GRPCAPIPort          string        `mapstructure:"GRPC_API_PORT"`
 	EmailSenderName      string        `mapstructure:"EMAIL_NAME"`
 	EmailSenderAddress   string        `mapstructure:"EMAIL_ADDRESS"`
 	EmailSenderPassword  string        `mapstructure:"EMAIL_PASSWORD"`

@@ -16,7 +16,3 @@ COPY --from=builder /app/main ./main
 COPY ./scripts/ ./scripts/
 COPY ./configs/config.env ./configs/config.env
 COPY ./internal/db/migrations/ ./internal/db/migrations/
-
-CMD [ "/app/main" ]
-
-ENTRYPOINT [ "/app/scripts/wait_for.sh", "0.0.0.0:5432", "--", "/app/scripts/start.sh" ]

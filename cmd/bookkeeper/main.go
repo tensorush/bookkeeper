@@ -49,7 +49,7 @@ func main() {
 	store := db.NewStore(connPool)
 
 	redisOpt := asynq.RedisClientOpt{
-		Addr: config.RedisAddress,
+		Addr: config.RedisHost + config.RedisPort,
 	}
 
 	if config.API == "json" {
@@ -96,7 +96,7 @@ func runGrpcServer(config configs.Config, store db.Store, taskDistributor worker
 	protogen.RegisterBookkeeperServer(grpcServer, server)
 	reflection.Register(grpcServer)
 
-	listener, err := net.Listen("tcp", config.GRPCAPIAddress)
+	listener, err := net.Listen("tcp", config.GRPCAPIHost+config.GRPCAPIPort)
 	if err != nil {
 		log.Fatal().Err(err).Msg("cannot create listener")
 	}
@@ -144,7 +144,7 @@ func runGatewayServer(config configs.Config, store db.Store, taskDistributor wor
 	swaggerHandler := http.StripPrefix("/swagger/", http.FileServer(statikFS))
 	mux.Handle("/swagger/", swaggerHandler)
 
-	listener, err := net.Listen("tcp", config.JSONAPIAddress)
+	listener, err := net.Listen("tcp", config.JSONAPIHost+config.JSONAPIPort)
 	if err != nil {
 		log.Fatal().Err(err).Msg("cannot create listener")
 	}
@@ -163,7 +163,7 @@ func runJSONServer(config configs.Config, store db.Store) {
 		log.Fatal().Err(err).Msg("cannot create server")
 	}
 
-	err = server.Start(config.JSONAPIAddress)
+	err = server.Start(config.JSONAPIHost + config.JSONAPIPort)
 	if err != nil {
 		log.Fatal().Err(err).Msg("cannot start server")
 	}
