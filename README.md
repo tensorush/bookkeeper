@@ -4,7 +4,7 @@
 [![Schema][schema-shield]][schema-url]
 [![License][license-shield]][license-url]
 
-### Server backend for a bookkeeping service deployed on [Vercel](https://vercel.com/).
+### Server backend for a bookkeeping service.
 
 ### :sparkles: Features
 
