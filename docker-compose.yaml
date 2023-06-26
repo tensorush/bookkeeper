@@ -8,8 +8,8 @@ services:
       - postgres
       - redis
     ports:
-      - "${JSON_API_HOST}:${JSON_API_PORT}:${JSON_API_PORT}"
-      - "${GRPC_API_HOST}:${GRPC_API_PORT}:${GRPC_API_PORT}"
+      - "${JSON_API_PORT}:${JSON_API_PORT}"
+      - "${GRPC_API_PORT}:${GRPC_API_PORT}"
     command: [ "/app/main" ]
     entrypoint:
       [
@@ -23,7 +23,7 @@ services:
     image: postgres:15.3-alpine3.18
     restart: unless-stopped
     ports:
-      - "${POSTGRES_HOST}:${POSTGRES_PORT}:${POSTGRES_PORT}"
+      - "${POSTGRES_PORT}:${POSTGRES_PORT}"
     environment:
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
@@ -33,4 +33,4 @@ services:
     image: redis:7.0-alpine3.18
     restart: unless-stopped
     ports:
-      - "${REDIS_HOST}:${REDIS_PORT}:${REDIS_PORT}"
+      - "${REDIS_PORT}:${REDIS_PORT}"
