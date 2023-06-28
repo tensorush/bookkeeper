@@ -1,4 +1,4 @@
-## :hamster: :books: bookkeeper
+## :hamster: :books: **bookkeeper**
 
 [![CI][ci-shield]][ci-url]
 [![Schema][schema-shield]][schema-url]
