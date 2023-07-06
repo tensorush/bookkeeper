@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
     paths: ["**.go"]
+
   pull_request:
     branches: [main]
     paths: ["**.go"]
@@ -21,6 +22,7 @@ jobs:
           - "${{ secrets.POSTGRES_PORT }}:${{ secrets.POSTGRES_PORT }}"
 
     runs-on: ubuntu-latest
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
@@ -32,8 +34,6 @@ jobs:
 
       - name: Set up Just
         uses: extractions/setup-just@v1
-        with:
-          just-version: "1.14"
 
       - name: Install migrate
         run: |
@@ -47,8 +47,15 @@ jobs:
       - name: Run tests
         run: just test
 
+      - name: Upload code coverage report to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          fail_ci_if_error: true
+          verbose: true
+
   lint:
     runs-on: ubuntu-latest
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v3

@@ -14,7 +14,8 @@ migration NAME:
     migrate create -ext sql -dir ./internal/db/migrations/ -seq {{ NAME }}
 
 test:
-    go test -v -race -cover -short -count=1 -vet=off ./...
+    go test -v -race -cover -short -count=1 -vet=off -coverprofile=cover.out -coverpkg=./... ./...
+    go tool cover -html=cover.out -o cover.html
 
 down:
     docker compose --env-file ./configs/config.env down
