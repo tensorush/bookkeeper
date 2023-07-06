@@ -2,6 +2,7 @@
 
 [![CI][ci-shield]][ci-url]
 [![Schema][schema-shield]][schema-url]
+[![Codecov][codecov-shield]][codecov-url]
 [![License][license-shield]][license-url]
 
 ### Server backend for a bookkeeping service.
@@ -43,5 +44,7 @@
 [ci-url]: https://github.com/tensorush/bookkeeper/blob/main/.github/workflows/ci.yaml
 [schema-shield]: https://img.shields.io/badge/click-2596BE?style=for-the-badge&logo=go&logoColor=2596BE&label=schema&labelColor=black
 [schema-url]: https://dbdocs.io/tensorush/bookkeeper
+[codecov-shield]: https://img.shields.io/codecov/c/github/tensorush/bookkeeper?style=for-the-badge&labelColor=black
+[codecov-url]: https://app.codecov.io/gh/tensorush/bookkeeper
 [license-shield]: https://img.shields.io/github/license/tensorush/bookkeeper.svg?style=for-the-badge&labelColor=black
 [license-url]: https://github.com/tensorush/bookkeeper/blob/main/LICENSE.md
