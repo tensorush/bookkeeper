@@ -5,7 +5,7 @@
 [![Codecov][codecov-shield]][codecov-url]
 [![License][license-shield]][license-url]
 
-### gRPC backend for a bookkeeping service.
+### Backend for a bookkeeping service based on gRPC.
 
 ### :sparkles: Features
 
