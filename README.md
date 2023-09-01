@@ -9,7 +9,7 @@
 
 ### :rocket: Usage
 
-#### [See `justfile` for all development and deployment commands.](justfile)
+#### See [`justfile`](justfile) for all development and deployment commands.
 
 ### :sparkles: Features
 
@@ -26,21 +26,21 @@
 
 ### :arrow_down: Dependencies
 
-- [`just` - command runner.](https://just.systems/)
+- [`just`](https://just.systems/) - command runner.
 
-- [`protoc` - Protocol Buffer compiler.](https://grpc.io/schema/protoc-installation/)
+- [`protoc`](https://github.com/golang/protobuf) - Protocol Buffer compiler.
 
-- [`sqlc` - SQL query interface generator.](https://sqlc.dev/)
+- [`dbml2sql`](https://dbml.dbdiagram.io/cli/) - DBML-to-SQL converter.
 
-- [`migrate` - Database migrations framework.](https://github.com/golang-migrate/migrate)
+- [`sqlc`](https://sqlc.dev/) - SQL query interface generator.
 
-- [`mockgen` - Mock testing framework for Go.](https://github.com/golang/mock)
+- [`dbdocs`](https://dbdocs.io/) - Database documentation tool.
 
-- [`statik` - Static file embedding tool for Go.](https://github.com/rakyll/statik)
+- [`mockgen`](https://github.com/golang/mock) - Mock testing framework for Go.
 
-- [`dbdocs` - Database documentation tool.](https://dbdocs.io/)
+- [`statik`](https://github.com/rakyll/statik) - Static file embedding tool for Go.
 
-- [`dbml2sql` - DBML-to-SQL converter.](https://dbml.dbdiagram.io/cli/)
+- [`migrate`](https://github.com/golang-migrate/migrate) - Database migrations framework.
 
 <!-- MARKDOWN LINKS -->
 
