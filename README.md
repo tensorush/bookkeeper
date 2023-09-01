@@ -7,36 +7,40 @@
 
 ### Backend for a bookkeeping service based on gRPC.
 
+### :rocket: Usage
+
+#### [See `justfile` for all development and deployment commands.](justfile)
+
 ### :sparkles: Features
 
 - Server API support:
-    - REST JSON using Gin framework,
     - gRPC using protobuf compiler,
-    - REST JSON using gRPC gateway.
+    - REST JSON using gRPC gateway,
+    - REST JSON using Gin framework.
 
 - Storage support: PostgreSQL and Redis.
 
 - Access token support: PASETO and JWT.
 
-- Email notifications for new users.
+- Email notifications for new users via SMTP.
 
 ### :arrow_down: Dependencies
 
-- [`just` - command runner](https://just.systems/)
+- [`just` - command runner.](https://just.systems/)
 
-- [`protoc` - Protocol Buffer compiler](https://grpc.io/schema/protoc-installation/)
+- [`protoc` - Protocol Buffer compiler.](https://grpc.io/schema/protoc-installation/)
 
-- [`sqlc` - SQL query interface generator](https://sqlc.dev/)
+- [`sqlc` - SQL query interface generator.](https://sqlc.dev/)
 
-- [`migrate` - Database migrations framework](https://github.com/golang-migrate/migrate)
+- [`migrate` - Database migrations framework.](https://github.com/golang-migrate/migrate)
 
-- [`mockgen` - Mock testing framework for Go](https://github.com/golang/mock)
+- [`mockgen` - Mock testing framework for Go.](https://github.com/golang/mock)
 
-- [`statik` - Static file embedding tool for Go](https://github.com/rakyll/statik)
+- [`statik` - Static file embedding tool for Go.](https://github.com/rakyll/statik)
 
-- [`dbdocs` - Database documentation tool](https://dbdocs.io/)
+- [`dbdocs` - Database documentation tool.](https://dbdocs.io/)
 
-- [`dbml2sql` - DBML-to-SQL converter](https://dbml.dbdiagram.io/cli/)
+- [`dbml2sql` - DBML-to-SQL converter.](https://dbml.dbdiagram.io/cli/)
 
 <!-- MARKDOWN LINKS -->
 
